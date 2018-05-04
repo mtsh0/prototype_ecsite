@@ -6,5 +6,14 @@ class TopController < ApplicationController
 
   def contact; end
 
-  def company; end
+  def company
+    @places = Position.all
+    @hash = Gmaps4rails.build_markers(@places) do |place, marker|
+      marker.lat place.latitude
+      marker.lng place.longitude
+      marker.infowindow place.title + " (" + place.description + ")"
+      # marker.infowindow
+
+    end
+  end
 end
