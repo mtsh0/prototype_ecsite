@@ -1,0 +1,33 @@
+<%= form_for(@info) do |f| %>
+
+  <% if @info.errors.any? %>
+    <div class="alert alert-danger">
+      <h3><%= @info.errors.count %>件のエラーがあります</h3>
+      <ul>
+        <% @info.errors.full_messages.each do |msg| %>
+          <li><%= msg.html_safe %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table>
+  <!-- 見出し -->
+  <div class="field">
+    <tr>
+      <th><%= f.label :title %></th>
+      <td><%= f.text_field :title %></td>
+    </tr>
+  </div>
+
+  <!-- 詳細 -->
+  <div class="field">
+    <tr>
+      <th><%= f.label :description %></th>
+      <td><%= f.text_area :description %></td>
+    </tr>
+  </div>
+</table>
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,359 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//PC用
+// @media screen and (min-width: 765px) {
+
+.items {
+
+  main.index {
+
+    table {
+      border: 2px solid #808080;
+      border-collapse: collapse;
+      table-layout: fixed;
+
+      th {
+        border: 2px solid #808080;
+        background-color: #C0C0C0;
+        border-collapse: collapse;
+        text-align: center;
+
+        &.cell-3 {
+          width: 130px;
+        }
+
+        &.cell-4 {
+          width: 130px;
+        }
+
+        &.cell-5 {
+          width: 70px;
+        }
+      }//th
+
+      td {
+        border: 2px solid #808080;
+        border-collapse: collapse;
+        word-wrap: break-word;
+
+        &.cell-1st{
+          text-align: center;
+        }
+
+        &.cell-3rd{
+          width: 150px;
+          padding: 0 5px;
+        }
+
+        &.cell-4th{
+          width: 150px;
+          padding: 0 5px;
+        }
+
+        &.cell-5th{
+          text-align: right;
+          padding: 0 5px;
+        }
+
+        &.cell-6th{
+          text-align: right;
+          padding: 0 5px;
+          width: 50px;
+        }
+
+        &.cell-7th{
+          width: 50px;
+          text-align: center;
+        }
+      }//td
+
+      img {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: auto;
+      } //img
+
+    } //table
+
+
+    //
+    //
+    //    img{
+    //      width: 100px;
+    //      height: 100px;
+    //      padding: 10px;
+    //      margin: auto;
+    //    }//img
+    //  }//td
+    //
+
+    //
+    //}//table
+
+
+
+    input {
+      .form-control {
+        padding-top: 7px;
+      }
+    }
+
+  } //main.index
+
+  main.new{
+
+    p {
+      height: 30px;
+    }//p
+
+    li {
+      list-style-type: disc;
+    } //li
+
+    h1 {
+      height: 60px;
+    }//h1
+
+    span{
+      color: red;
+      font-size: 10px;
+    }//span
+
+
+    table {
+      border: 2px solid #808080;
+      border-collapse: collapse;
+      //  table-layout: fixed;
+      //
+      th {
+        border: 2px solid #808080;
+        background-color: #C0C0C0;
+        width: 150px;
+        //    border-collapse: collapse;
+        //    text-align: center;
+      }
+      //th
+      //
+      td {
+        border: 2px solid #808080;
+        border-collapse: collapse;
+        //    word-wrap: break-word;
+        //text-align: center;
+
+        //img{
+        //  width: 100px;
+        //  height: 100px;
+        //  padding: 10px;
+        //  margin: auto;
+        //}//img
+      }
+
+          //img{
+          //  width: 100px;
+          //  height: 100px;
+          //  padding: 10px;
+          //  margin: auto;
+          //}//img
+    }//table
+  }//main.new
+
+  main.show{
+
+    p {
+      height: 30px;
+    }//p
+
+    li {
+      list-style-type: disc;
+    } //li
+
+    h1 {
+      height: 60px;
+    }//h1
+
+    span{
+      color: red;
+      font-size: 10px;
+    }//span
+
+
+    table {
+      border: 2px solid #808080;
+      border-collapse: collapse;
+        table-layout: fixed;
+
+      th {
+        border: 2px solid #808080;
+        background-color: #C0C0C0;
+        width: 150px;
+            border-collapse: collapse;
+        //    text-align: center;
+      }
+      //th
+      //
+      td {
+        border: 2px solid #808080;
+        border-collapse: collapse;
+            word-wrap: break-word;
+        padding: 0 10px;
+        //text-align: center;
+
+        img{
+          width: 100px;
+          height: 100px;
+          padding: 10px;
+          margin: auto;
+        }//img
+      }
+    }//table
+  }//main.show
+
+  main.edit{
+
+    p {
+      height: 30px;
+    }//p
+
+    li {
+      list-style-type: disc;
+    } //li
+
+    h1 {
+      height: 60px;
+    }//h1
+
+    span{
+      color: red;
+      font-size: 10px;
+    }//span
+
+
+    table {
+      border: 2px solid #808080;
+      border-collapse: collapse;
+        table-layout: fixed;
+
+      th {
+        border: 2px solid #808080;
+        background-color: #C0C0C0;
+        width: 150px;
+        //    border-collapse: collapse;
+        //    text-align: center;
+      } //th
+
+      td {
+        border: 2px solid #808080;
+        border-collapse: collapse;
+        word-wrap: break-word;
+        //text-align: center;
+
+        img{
+          width: 100px;
+          height: 100px;
+          padding: 10px;
+          margin: auto;
+        }//img
+      }//td
+
+    }//table
+  }//main.edit
+
+  main.preview{
+
+    h1 {
+      background: linear-gradient(transparent 70%, #4CAF50 70%);
+
+      span{
+        font-size: 20px;
+        color: black;
+      }//span
+    }//h1
+
+    h2 {
+      background: linear-gradient(transparent 70%, #4CAF50 70%);
+    }//h2
+
+    p {
+      height: 30px;
+    }//p
+
+    li {
+      list-style-type: disc;
+    } //li
+
+    .float-left{
+      float: left;
+
+      .image{
+        display: flex;
+        flex-wrap: wrap;
+        width: 303px;
+        height: 403px;
+        border: 2px solid #C0C0C0;
+        margin: 0 20px 0 10px;
+
+        .parentImage{
+          justify-content: center;
+          width: 300px;
+          height: 300px;
+        }//.parentImage
+
+        .childImage{
+          width: 100px;
+          height: 100px;
+        }//.childImage
+      }//.image
+    }//.float-left
+
+    .description{
+      float: right;
+      width: 350px;
+      min-height: 403px;
+      border: 2px solid #C0C0C0;
+    }//.description
+
+    .clearboth{
+      clear: both;
+    }//.clearboth
+
+    .attention{
+      width: 680px;
+
+
+    }//.attention
+
+    .price-cart{
+      width: 680px;
+      height:150px;
+      margin: 10px auto;
+      border: 2px solid #C0C0C0;
+
+      .price{
+        text-align: center;
+        border: 2px solid #C0C0C0;
+      }//.price
+
+      .quantity{
+        text-align: center;
+        margin: 0 auto 5px auto;
+        border: 2px solid #C0C0C0;
+
+        input{
+          width: 30px;
+        }
+      }//.quantity
+
+      .add-to-cart{
+        text-align: center;
+        margin: 0 auto;
+        border: 2px solid #C0C0C0;
+      }
+    }//.price-cart
+
+  }//main.preview
+
+}//.items
+// }//@media

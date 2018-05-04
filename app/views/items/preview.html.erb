@@ -1,0 +1,51 @@
+<% provide(:title, "#{@item.itemName}") %>
+<h2>Items#preview</h2>
+<p>Find me in app/views/items/preview.html.erb</p>
+
+
+<h1><%= @item.itemName %> <span>(品番：<%= @item.partNumber %>)</span></h1>
+<div class="float-left">
+  <div class="image">
+      <%= image_tag @item.mainImage.url, :class => "parentImage" %><!--メインイメージ-->
+      <%= image_tag @item.mainImage.url, :class => "childImage" %><!--サブイメージ1-->
+      <% if @item.image2? %>
+          <%= image_tag @item.mainImage.url, :class => "childImage" %><!--サブイメージ2-->
+      <% end %>
+      <% if @item.image3? %>
+          <%= image_tag @item.mainImage.url, :class => "childImage" %><!--サブイメージ3-->
+      <% end %>
+  </div>
+</div>
+<div class="description"><!--説明-->
+  <%= @item.description %>
+</div>
+<div class="clearboth"></div>
+<% if @item.attention.blank? %>
+<% else %>
+    <div class="attention">
+      <h2>注意事項</h2>
+      <div><%= @item.attention %></div>
+
+    </div>
+<% end %>
+<div class="price-cart">
+  <div class="price">
+    価格<br>
+    <% price = (@item.price).to_s %>
+    <% if price.end_with?(".0") %><!--整数なら-->
+        <% @item.price = (@item.price).to_i %>
+        <%= number_to_currency(@item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+    <% else %>
+        <%= number_to_currency(@item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+    <% end %>
+  </div>
+  <div class="quantity">
+    <input type="text">個
+  </div>
+  <div class="add-to-cart">
+    <button>カートに入れる</button>
+  </div>
+
+</div>
+
+<br>

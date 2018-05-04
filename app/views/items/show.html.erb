@@ -1,0 +1,82 @@
+<% provide(:title, "商品詳細") %>
+<h1>Items#show</h1>
+<p>Find me in app/views/items/show.html.erb</p>
+
+<br>
+<table>
+  <caption>商品詳細</caption>
+    <tr>
+      <th>商品コード</th>
+      <td colspan="3"><%= @item.itemCodeNo %></td>
+    </tr>
+    <tr>
+      <th>品番</th>
+      <td colspan="3"><%= @item.partNumber %></td>
+    </tr>
+    <tr>
+      <th>商品名</th>
+      <td colspan="3"><%= @item.itemName %></td>
+    </tr>
+    <tr>
+      <th>商品説明</th>
+      <td colspan="3"><%= @item.description %></td>
+    </tr>
+    <tr>
+      <th>注意事項</th>
+      <td colspan="3"><%= @item.attention %></td>
+    </tr>
+    <tr>
+      <th>価格</th>
+      <td colspan="3">
+        <%# @item.price %>
+        <% price = (@item.price).to_s %>
+        <% if price.end_with?(".0") %><!--整数なら-->
+            <% @item.price = (@item.price).to_i %>
+            <%= number_to_currency(@item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+        <% else %>
+            <%= number_to_currency(i@tem.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th>出荷単位</th>
+      <td colspan="3"><%= @item.shippingUnit %></td>
+    </tr>
+    <tr>
+      <th rowspan="3">出荷単位</th>
+      <td>メイン画像</td>
+      <td>画像2</td>
+      <td>画像3</td>
+    </tr>
+    <tr>
+      <td><%= image_tag @item.mainImage.url %></td>
+      <td>
+        <% if @item.image2? %>
+          <%= image_tag @item.image2.url %>
+        <% else %>
+          <%= image_tag '/assets/no-image.png' %>
+        <% end %>
+      </td>
+      <td>
+        <% if @item.image3? %>
+          <%= image_tag @item.image3.url %>
+        <% else %>
+          <%= image_tag '/assets/no-image.png' %>
+        <% end %>
+      </td>
+    </tr>
+</table>
+<br>
+<br>
+<%= link_to '編集する(editアクションへ)', edit_item_path %>
+<br>
+<br>
+<%= link_to '削除する(destroyアクションへ)', item_path(@item.id), method: :delete, data: {confirm: "本当に削除しますか?"} %>
+<br>
+<br>
+<%= link_to 'indexアクションへ', items_path %>
+<br>
+<br>
+<%= link_to 'newアクションへ', new_item_path %>
+<br>
+<br>

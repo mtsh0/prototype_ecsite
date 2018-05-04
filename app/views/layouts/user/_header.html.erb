@@ -1,0 +1,54 @@
+<header>
+  <!--ロゴ-->
+  <div id="logo">
+    <%= link_to root_path do %>
+      <%= image_tag('logo.png', :size => "270x65") %>
+    <% end %>
+  </div>
+  <!--ログイン-->
+  <% if user_signed_in? %>
+      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+      <!-- *_path はUserモデルを作成したときに、
+      deviseにより自動で作成されてますので、rake routesで確認できます -->
+      <div id="right">
+        <% if user_signed_in? %>
+          <%= current_user.email %>さん
+        <% else %>
+          <div>げすとさん</div>
+        <% end %>
+
+        <div id="login-out">
+          <%= link_to "ログアウト", destroy_user_session_path %>
+        </div>
+        <!--基本情報などのメニュー表示-->
+        <% if false %>
+          <a class="menu-trigger" href="#">
+            <% if false %>
+              <div><%= link_to 'ユーザー情報', user_path(id: current_user.id) %></div>
+              <div><%= link_to '注文履歴', users_path %></div>
+            <% end %>
+            <div><%= link_to "ログアウト", destroy_user_session_path %></div>
+            <span><%= link_to 'ユーザー情報', user_path(id: current_user.id) %></span>
+            <span><%= link_to '注文履歴', users_path %></span>
+            <span><%= link_to "ログアウト", destroy_user_session_path %></span>
+          </a>
+        <% end %>
+      </div>
+    <% if false %>
+      <%= link_to 'プロフィール変更', edit_user_registration_path %>
+      <div id="login-out">
+
+      </div>
+    <% end %>
+  <% else %>
+      <div id="right">
+      <div id="login-out">
+        <%= link_to "ログイン", new_user_session_path %>
+      </div>
+      <div id="login-out">
+        <%= link_to "新規登録", new_user_registration_path %>
+      </div>
+      </div>
+  <% end %>
+  <!--ログイン-->
+</header>

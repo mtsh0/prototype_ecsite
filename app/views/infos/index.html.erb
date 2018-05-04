@@ -1,0 +1,39 @@
+<% provide(:title, "おしらせ一覧") %>
+<h1>Infos#index</h1>
+<p>Find me in app/views/infos/index.html.erb</p>
+<br>
+<%= link_to 'トップへ' , root_path %>
+<br>
+<%= link_to 'おしらせ新規登録', new_info_path %>
+<br>
+<h3>お知らせ一覧</h3>
+<div><%= page_entries_info @infos %></div>
+
+<% unless @infos.blank? %>
+  <table>
+    <thead>
+      <tr>
+        <th>登録日</th>
+        <th>見出し</th>
+        <th>詳細</th>
+        <th>修正</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @infos.each do |info| %>
+      <tr>
+        <td><%= info.created_at.strftime("%y/%m/%d") %></td>
+        <td><%= info.title %></td>
+        <td><%= info.description %></td>
+        <td><%= link_to '変更',edit_info_path(info.id) %>　<%= link_to '削除', info_path(info.id), method: :delete, data: {confirm: "本当に削除しますか?"}%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>まだおしらせはありません</p>
+<% end %>
+<br>
+<br>
+<%= paginate @infos %>
+

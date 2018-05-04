@@ -1,0 +1,455 @@
+
+/* 当ホームページ用レイアウト
+========================================================================== */
+
+
+//PC用
+@media screen and (min-width: 765px){
+
+//バリデーションエラー表示
+
+// .field_with_errors{
+//   @extend .has-error;
+// }
+
+// // html {
+  overflow: auto;
+}
+
+  body {
+    overflow-x: hidden;
+    position: relative;
+    margin: 0 auto;
+
+  }
+//ヘッダー部分
+    header {
+      height: 65px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      background-color: #4caf50;
+
+      //ロゴ(左寄せ)
+      // #logo{
+      //   //margin-right: auto;
+      // }
+
+      //右寄せ用タグ
+      #right{
+        //width:300px;
+        display: flex;
+        justify-content: flex-end;
+
+      }
+
+  #right{
+    display: flex;
+  }
+
+      //ログイン・ログアウト
+      #login-out{
+        margin: 5px;
+        padding: 6px;
+        border-radius: 5px;
+        background-color: #ffee5a;
+      }
+
+        //検索部分
+
+
+    }
+
+
+//グローバルナビゲーション
+    #menu-bar{
+      display: flex;
+      height: 70px;
+      width: 100%;
+      justify-content: center;
+      background-color: #43A047;
+
+      #main-menu{
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        //ナビ項目
+        .menu-column{
+          flex-basis: 25%;
+          height: 65px;
+          line-height: 65px;
+          font-size: 23px;
+          color: #FFFFFF;
+          border:solid 2px #BBBBBB;
+          border-collapse: collapse;
+
+          a{
+            color: #FFFFFF;
+
+            &:hover{
+              opacity: 0.4;
+            }
+          }
+
+        }
+      }
+
+    }
+
+  #deliveryCharge{
+    width: 1000px;
+    margin: 0 auto;
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  #info{
+    width: 1000px;
+    margin: 0 auto 10px auto;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    #info-title{
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      padding-left: 30px;
+      padding: 10px 0 0 30px;
+
+      #info-all{
+        display: inline-block;
+        font-size: 15px;
+        color: #EFEFEF;
+        padding-left: 20px;
+      }
+    }
+
+    .info-columns{
+      color: #FFFFFF;
+      line-height: 150%;
+      padding:  3px 0 0 60px;
+
+    }
+  }
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    width: 1000px;
+    border: solid 2px #B00100;
+    margin:0 auto;
+
+
+  }
+
+
+
+  //サイドバー
+  #side-bar{
+    width: 220px;
+    background-color: #BBBBBB;
+
+    #shipping-defayment{
+      text-align: center;
+      background-color: #FFFFFF;
+    }
+
+    #side-bar-title1{
+      width: 100%;
+      height: 30px;
+      font-size: 20px;
+      text-align: center;
+      background-color: #FFFFFF;
+    }
+
+    // //検索ボックス用
+    // .search_box{
+
+    // }
+
+    .accbox{
+      color: #FFFFFF;
+
+      label{
+        font-size: 25px;
+        font-style: italic;
+        line-height: 50px;
+        margin-left: 20px;
+        height: 50px;
+        width: 220px;
+        cursor: pointer;
+        display: block;
+
+        &:hover{
+          opacity: 0.4;
+        }
+
+        //矢印を付加する
+        &:before{
+          content: '\f054';
+          font-family: 'FontAwesome';
+          padding-right: 8px;
+        }
+
+      }//label
+
+      input{
+        display: none;
+      }
+
+      //中身を非表示にしておく
+      .show{
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.8s;
+      }
+
+    }//.accbox
+
+    //詳細の表示切り替え
+    .on-off:checked + .show {
+      height: auto;
+      opacity: 1;
+      transition: 0.8s;
+    }
+
+    //アイコンを入れ替える
+    .on-off:checked + label:before{
+      font-family: 'FontAwesome';
+      content: '\f078';
+    }
+
+    .genrelist{
+      font-size: 18px;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 30px;
+      border-top: solid 1.5px #BBBBBB;
+      border-collapse: collapse;
+      &:hover{
+        opacity: 0.4;
+      }
+
+      &:last-child{
+        border-bottom: solid 1.5px #BBBBBB;
+      }
+    }
+
+    //各ジャンルの色指定
+    //新商品
+    .new-items{
+      background-color: #FDD835;
+    }
+
+    //ジャンル1
+    .genre1{
+      background-color: #AED581;
+    }
+    //ジャンル2
+    .genre2{
+      background-color: #F8BBD0;
+    }
+
+    //ジャンル3
+    .genre3{
+      background-color: #90CAF9;
+    }
+
+    .genre4{
+      background-color: #9575CD;
+    }
+
+  }
+
+
+
+    main {
+      width: 780px;
+      min-height: 800px;
+      padding: 10px 30px 30px 30px;
+    }
+
+    footer{
+      display: flex;
+      height: 65px;
+      justify-content: center;
+      align-items: center;
+      background-color: #4caf50;
+
+      #copyright{
+        font-size: 17px;
+        color: #FFFFFF;
+        opacity: 0.4;
+      }
+    }
+
+  //右上部分のハンバーガーメニュー用css
+  //https://www.nxworld.net/tips/12-css-hamburger-menu-active-effect.html
+  //1. 中央のラインが消え、上下のラインでクローズボタンに
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+  .menu-trigger {
+    position: relative;
+    width: 50px;
+    height: 44px;
+  }
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  .menu-trigger span:nth-of-type(2) {
+    top: 20px;
+  }
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  .menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+  }
+  .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+  }
+  // .humberger-column{
+
+  // }
+
+
+
+//PC用終了
+
+//モバイル用
+@media screen and (max-width: 764px){
+
+}
+
+
+
+  #users-registration-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #registration-box{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      width: 300px;
+      border: 2px solid #999999;
+
+      h2{
+        color: #FFFFFF;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background-color: #4caf50;
+        margin-top: 0px;
+        border-bottom: solid 2px #999999;
+
+      }
+
+      #new_user{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        border-bottom: solid 2px #999999;
+
+        input[type="email"],
+        input[type="password"]{
+          font-size: 17px;
+          width: 200px;
+          height:30px;
+          //text-align: center;
+          margin: 5px auto;
+          border: 2px solid #EFEFEF;
+          border-radius: 5px;
+
+        }
+
+        input[type="submit"]{
+          color: #FFFFFF;
+          font-size: 18px;
+          width: 130px;
+          height: 40px;
+          line-height: 40px;
+          margin: 0 auto 10px auto;
+          background-color: #0091EA;
+          border-radius: 5px;
+          &:hover{
+            opacity: 0.4;
+            cursor: pointer;
+          }
+        }
+
+        .field{
+          margin: 0px auto 10px auto;
+          color: #BBBBBB;
+        }
+      }
+
+      .btn-yellow{
+        width: 190px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 5px;
+        margin: 3px auto 3px auto;
+        background-color: #FFCA28;
+
+        a{
+          color: #FFFFFF;
+          &:hover{
+            opacity: 0.4;
+          }
+        }
+
+      }
+
+      .btn-grey{
+        width: 190px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 5px;
+        margin: 3px auto 3px auto;
+        background-color: #BBBBBB;
+
+        a{
+          color: #FFFFFF;
+          &:hover{
+            opacity: 0.4;
+          }
+        }
+      }
+
+    }//#registration-box
+  }//#users-registration-main

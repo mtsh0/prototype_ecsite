@@ -1,0 +1,35 @@
+<nav>
+  <div id="menu-bar">
+    <!--あいう-->
+    <div id="main-menu">
+      <div class="menu-column">ご利用案内</div>
+      <div class="menu-column">Q &amp; A</div>
+      <div class="menu-column" style="font-size: 15px; line-height: 30px;">
+        <%= link_to top_contact_path do %>
+          お問い合わせ<br>(カタログ請求)
+        <% end %>
+      </div>
+      <div class="menu-column">
+        <%= link_to  "プロフィール", top_company_path %>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="deliveryCharge">
+  お買い上げ金額が&yen;18,000以上で送料( &yen;350)が無料、　&yen;30,000以上で送料( &yen;324)が無料になります!!
+</div>
+<!--おしらせ-->
+<div id="info">
+  <div id="info-title">お知らせ<div id="info-all">もっと見る</div></div>
+    <% unless @osirase.blank? %>
+      <% @osirase.each_with_index do |info, index| %>
+          <div class="info-columns">
+            <%= info.created_at.strftime("%y/%m/%d") %>&nbsp;&nbsp;
+            <%= info.description %>
+          </div>
+      <% end %>
+    <% else %>
+      <div class="info-columns">お知らせ情報はありません</div>
+    <% end %>
+</div>

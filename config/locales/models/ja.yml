@@ -1,0 +1,29 @@
+ja:
+  activerecord:
+    models:
+      # item:
+    attributes:
+      item:
+        id: "ID"
+        itemCodeNo: "商品コード"
+        partNumber: "品番"
+        itemName: "商品名"
+        genre_id: "ジャンル"
+        subgenre_id: "サブジャンル"
+        description: "商品説明"
+        attention: "注意事項"
+        shippingUnit: "出荷単位"
+        price: "価格"
+        mainImage: "メイン画像"
+        image2: "画像2"
+        image3: "画像3"
+        created_at: "登録日時"
+        updated_at: "更新日時"
+      info:
+        title: "見出し"
+        description: "お知らせ詳細"
+      user:
+        email: "メールアドレス"
+        passward: "パスワード"
+        password_confirmation: "確認用パスワード"
+        remember_me: "次回から自動的にログイン"

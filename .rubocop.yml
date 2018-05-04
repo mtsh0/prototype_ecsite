@@ -1,0 +1,18 @@
+# https://sakanasoft.net/rubocop/#LayoutIndentHash
+# https://wonderwall.hatenablog.com/entry/2015/08/17/213718
+
+# Line is too long を無視
+Metrics/LineLength:
+  Enabled: false
+
+# Use only ascii symbols in comments.
+AsciiComments:
+  Enabled: false
+
+# "Prefer single-quoted strings when you don't need string interpolation or special symbols."を無効
+Style/StringLiterals:
+  Enabled: false
+
+# "Missing top-level class documentation comment."を無効
+Style/Documentation:
+  Enabled: false

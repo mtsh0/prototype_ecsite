@@ -1,0 +1,47 @@
+<% provide(:title, "商品一覧") %>
+<h1>Items#index</h1>
+<p>Find me in app/views/items/index.html.erb</p>
+<br>
+<% unless @items.blank? %>
+  <table>
+      <tr>
+        <th class="cell-1">商品コード</th>
+        <th>画像</th>
+        <th class="cell-3">品番</th>
+        <th class="cell-4">商品名</th>
+        <th class="cell-5">価格</th>
+        <th class="cell-6">出荷<br>単位</th>
+        <th>詳細</th>
+      </tr>
+      <% @items.each do |item| %>
+        <tr>
+          <td class="cell-1st"><%= item.itemCodeNo %></td>
+          <td><%= image_tag item.mainImage.url %></td>
+          <td class="cell-3rd" style="max-width: 150px;"><!--あああああああああああああああああああああああああ--><%= item.partNumber %></td>
+          <td class="cell-4th" style="max-width: 150px;"><%= item.itemName %></td>
+          <td class="cell-5th">
+            <% price = (item.price).to_s %>
+            <% if price.end_with?(".0") %><!--整数なら-->
+                <% item.price = (item.price).to_i %>
+                <%= number_to_currency(item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+            <% else %>
+                <%= number_to_currency(item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+            <% end %>
+          </td>
+          <td class="cell-6th"><%= item.shippingUnit %></td>
+          <td class="cell-7th"><%= link_to '詳細', item_path(item.id) %></td>
+        </tr>
+      <% end %>
+  </table>
+<% else %>
+  <p>まだ商品は登録されていません</p>
+<% end %>
+<br>
+<br>
+<%= paginate @items %>
+
+<br>
+<%= link_to '新規登録(newアクションへ)', new_item_path %>
+<br>
+<br>
+<% if false %><%= link_to 'indexアクションへ', items_path %><% end %>

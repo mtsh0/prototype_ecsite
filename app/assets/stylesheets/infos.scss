@@ -1,0 +1,26 @@
+// Place all the styles related to the infos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.infos{
+
+  // table{
+  //   border: 1px solid #FFFFFF;
+  // }
+  main{
+    table{
+      border: solid 2px lightgrey;
+      border-collapse: collapse;
+
+      th{
+        border: solid 2px lightgrey;
+        border-collapse: collapse;
+      }
+
+      td{
+        border: solid 2px lightgrey;
+        border-collapse: collapse;
+      }
+    }//table
+  }
+
+}
