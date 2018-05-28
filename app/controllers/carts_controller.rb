@@ -22,7 +22,7 @@ class CartsController < ApplicationController
       if @checkcartitem.blank?
         @cartitem.save
         # binding.pry
-        redirect_to carts_path, success: "#{@checkcartitem.item.itemName}がカートに追加されました"
+        redirect_to carts_path, success: "#{@cartitem.item.itemName}がカートに追加されました"
       else
         @checkcartitem.update_columns(quantity: (@checkcartitem.quantity + @cartitem.quantity))
         @checkcartitem.save
