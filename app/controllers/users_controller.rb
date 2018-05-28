@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_layout
 
   def index
-    @users = User.all
+    @orders = Order.where(user_id: current_user.id).reverse_order
   end
 
   def show
-    layout 'profile_user'
     @user = User.find(id: current_user.id)
+  end
+
+  def set_layout
+    layout 'profile_user'
   end
 end
