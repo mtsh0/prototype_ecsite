@@ -6,6 +6,7 @@
       <li class="list-group-item">配送先の設定<%= link_to '配送先情報', address_path(user_id: current_user.id) %></li>
       <li class="list-group-item"><%= link_to 'メールアドレス', user_path %></li>
       <li class="list-group-item"><%= link_to 'パスワードの変更', edit_user_password_path %></li>
+      <li class="list-group-item"><%= link_to '退会する', edit_user_password_path, method: :delete, data: {confirm: '退会してよろしいですか?'} %></li>
     </ul>
   </div>
 </div>
