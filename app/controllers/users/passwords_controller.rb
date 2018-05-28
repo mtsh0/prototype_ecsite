@@ -17,9 +17,11 @@ class Users::PasswordsController < Devise::PasswordsController
   # end
 
   # PUT /resource/password
-  # def update
-  #   super
-  # end
+  def update
+    # super
+    sign_in(current_user, bypass: true)
+    # redirect_to edit_user_password_path, success: 'パスワードが変更できました'
+  end
 
   # protected
 
