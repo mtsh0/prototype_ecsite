@@ -7,7 +7,10 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.includes([:cartitem, :item]).where(id: params[:id])
+    @order = Order.find(params[:id])
+    @cartitems = Cartitem.includes(:item).where(order_id: @order.id)
+    @address = Address.find_by(user_id: current_user.id)
+    # binding.pry
   end
 
   def new
