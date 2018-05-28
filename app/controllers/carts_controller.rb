@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
   # before_action :set_cartitems, only: [:add_item]
+  before_action :authenticate_user!
+
   def index
     @cartitems = Cartitem.includes(:item).where(order_id: nil,user_id: current_user.id)
 
