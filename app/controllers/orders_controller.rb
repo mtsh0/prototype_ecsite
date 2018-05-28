@@ -10,6 +10,12 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @cartitems = Cartitem.includes(:item).where(order_id: @order.id)
     @address = Address.find_by(user_id: current_user.id)
+    @total_count = 0
+    @total_price = 0
+    @cartitems.each do |cartitem|
+      @total_count += cartitem.quantity
+      @total_price += cartitem.quantity * cartitem.item.price
+    end
     # binding.pry
   end
 
