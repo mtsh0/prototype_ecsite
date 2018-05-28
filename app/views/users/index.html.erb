@@ -1,12 +1,63 @@
+<% provide(:title, 'ユーザー情報') %>
 <h1>Users#index</h1>
 <p>Find me in app/views/users/index.html.erb</p>
 
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+<h3>注文履歴一覧</h3>
+<table>
+  <tr>
+    <th class="text-center">注文番号</th>
+    <th class="text-center">注文日</th>
+    <th class="text-center">合計金額</th>
+    <th class="text-center">配送会社</th>
+    <th class="text-center">配送業者<br>問い合わせ番号</th>
+    <th class="text-center">注文詳細</th>
+    <th class="text-center">配送状況確認</th>
+  </tr>
 
-<ul class="users">
-  <% @users.each do |user| %>
-      <li><%= user.email %></li>
-      <li><%= link_to "ユーザー#{user.id}", user_path(user) %></li>
+  <% @orders.each do |order| %>
+      <tr>
+        <!--注文番号-->
+        <td class="text-center"><%= order.order_no %></td>
+
+        <!--注文日-->
+        <td class="text-center"><%= order.created_at.strftime("%Y/%m/%d") %><br><%= order.created_at.strftime("%H:%M") %></td>
+
+        <!--合計金額-->
+        <td class="text-right"><%= number_to_currency( order.total_price, :format => "%u%n", :precision => 0, :unit =>"¥") %></td>
+
+        <!--配送会社-->
+        <% unless order.dvendor_id.nil? %>
+            <td class="text-center"><%= order.dvendor.name%></td>
+        <% else %>
+            <td class="text-center">未登録</td>
+        <% end %>
+
+        <!--配送業者問い合わせ番号-->
+        <% unless order.d_number.nil? %>
+            <td class="text-center"></td>
+        <% else %>
+            <td class="text-center">未登録</td>
+        <% end %>
+
+        <!--注文詳細-->
+        <td class="text-center"><%= link_to '詳細', order_path(order.id) %></td>
+        <!--配送状況確認-->
+        <% unless ((order.dvendor_id == nil) || (order.d_number == nil)) %>
+            <td class="text-center"><%= link_to '確認(別サイトへ)', "http://thira.plavox.info/transport/api/?t=#{order.dvendor.for_api_name}&no=#{order.d_number}", target: '_blank' %></td>
+        <% else %>
+            <td class="text-center">未登録</td>
+        <% end %>
+      </tr>
   <% end %>
-</ul>
+</table>
+
+
+
+
+
+<!--<ul class="users">-->
+  <%# @users.each do |user| %>
+      <!--<li><%#= user.email %></li>-->
+      <!--<li><%#= link_to "ユーザー#{user.id}", user_path(user) %></li>-->
+  <%# end %>
+<!--</ul>-->
