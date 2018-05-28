@@ -61,6 +61,7 @@
 
 Rails.application.routes.draw do
 
+  devise_for :managers
   # googlemap用
   resources :positions
   devise_for :users, controllers: {
