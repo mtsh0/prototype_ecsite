@@ -1,5 +1,9 @@
+<% provide(:title, 'メールアドレス') %>
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
-<% provide(:title, @user.id) %>
-<h1>My page (<%= @user.email %>)</h1>
+<h3>あなたのメールアドレス</h3>
+<br>
+<p><%= current_user.email %></p>
+
+<%= link_to 'メールアドレスを変更する', edit_user_registration_path %>
