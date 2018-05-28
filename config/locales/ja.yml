@@ -8,6 +8,17 @@ ja:
       next: "次へ"
       truncate: "&hellip;"
   activerecord:
+    attributes:
+      address:
+        user_name: "配送先氏名"
+        name_kana: "氏名(かな)"
+        tel: "電話番号"
+        postalcode: "郵便番号"
+        prefecture_id: "都道府県"
+        city: "市区町村"
+        street: "番地"
+        others: "その他"
+
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

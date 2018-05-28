@@ -10,7 +10,6 @@
         <th class="cell-3">品番</th>
         <th class="cell-4">商品名</th>
         <th class="cell-5">価格</th>
-        <th class="cell-6">出荷<br>単位</th>
         <th>詳細</th>
       </tr>
       <% @items.each do |item| %>
@@ -28,7 +27,6 @@
                 <%= number_to_currency(item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
             <% end %>
           </td>
-          <td class="cell-6th"><%= item.shippingUnit %></td>
           <td class="cell-7th"><%= link_to '詳細', item_path(item.id) %></td>
         </tr>
       <% end %>

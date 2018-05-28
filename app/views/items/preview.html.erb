@@ -39,12 +39,16 @@
         <%= number_to_currency(@item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
     <% end %>
   </div>
-  <div class="quantity">
-    <input type="text">個
-  </div>
-  <div class="add-to-cart">
-    <button>カートに入れる</button>
-  </div>
+  <% if user_signed_in? %>
+    <%= form_tag(add_item_carts_path, method: :post) do %>
+      <%= hidden_field_tag :item_id, @item.id %>
+      <%= hidden_field_tag :user_id, current_user.id %>
+      <%= select_tag :quantity, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]) %>
+      <%= submit_tag 'カートに入れる', data: { disable_with: 'カートに追加しています' } %>
+    <% end %>
+  <% else %>
+    <%= link_to 'ログインする', new_user_session_path %>
+  <% end %>
 
 </div>
 

@@ -41,15 +41,21 @@ class ItemsController < ApplicationController
 
   def preview
     @item = Item.find(params[:id])
+    # @cartitem = Cartitem.new(cartitem_params)
+    @cartitems = Cartitem.all
+
   end
 
   private
   def item_params
-    params.require(:item).permit(:itemCodeNo, :partNumber, :itemName, :genre_id, :topDispflg, :description, :attention, :price, :shippingUnit, :mainImage, :mainImage_cache, :image2, :image2_cache, :remove_image2, :image3, :image3_cache, :remove_image3)
+    params.require(:item).permit(:itemCodeNo, :partNumber, :itemName, :genre_id, :topDispflg, :description, :attention, :price, :mainImage, :mainImage_cache, :image2, :image2_cache, :remove_image2, :image3, :image3_cache, :remove_image3)
   end
 
   def set_item
     @item = Item.find(params[:id])
   end
 
+  # def cartitem_params
+  #   params.require(:cartitem).permit(:quantity, :item_id, :user_id)
+  # end
 end

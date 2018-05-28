@@ -5,3 +5,11 @@ one:
 
 two:
   name: MyString
+
+# == Schema Information
+#
+# Table name: genres
+#
+#  id   :integer          not null, primary key
+#  name :string(255)
+#

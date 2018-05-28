@@ -1,0 +1,83 @@
+<h1>Orders#new</h1>
+<p>Find me in app/views/orders/new.html.erb</p>
+
+<!--カード決済用-->
+<%= form_tag(pay_orders_path, method: :post, datakey: 'pk_test_4d255221d772d3b51dd14284') do %>
+
+    <input type="text" name="number" maxlength="16" placeholder="カード番号">(4242424242424242 を入力してください)<br>
+    <input type="text"  name="cvc" maxlength="3" placeholder="CVC">(440 を入力してください)<br>
+    <input type="text" name="exp_month" maxlength="2" placeholder="月">(01 ~ 12 の間で入力してください)<br>
+    <input type="text" name="exp_year" maxlength="4" placeholder="西暦（４桁）">(2019 以上で入力してください)<br>
+    <input type="text" name="name" placeholder="名前(英大文字)">(KAKI AIU)<br>
+    <!--カード番号-->
+    <!--<label>カード番号</label><br>-->
+    <%# text_field_tag(:number, maxlength: '16', placeholder: 'カード番号') %><br>
+
+    <!--セキュリティ番号-->
+    <!--<label>CVC番号(セキュリティ番号)</label><br>-->
+    <%# text_field_tag :cvc, maxlength: '3', placeholder: 'CVC(セキュリティ番号)' %><br>
+    <!--有効期限-->
+    <!--<label>有効期限</label><br>-->
+    <!--月-->
+    <!--<label>月</label>-->
+    <%# text_field_tag :exp_month, maxlength: '2', placeholder: '月' %>
+    <!--西暦-->
+    <!--<label>西暦</label>-->
+    <%# text_field_tag :exp_year, maxlength: '4', placeholder: '西暦(4桁)' %>
+
+    <div class="field">
+      <% submit_tag '注文を確定する' %>
+      <input type="submit">
+    </div>
+<% end %>
+
+<!--商品の最終確認-->
+<table>
+  <tr>
+    <th class="text-center">商品コード</th>
+    <th class="text-center">品番</th>
+    <th class="text-center">商品名</th>
+    <th class="text-center">金額</th>
+    <th class="text-center">数量</th>
+    <th class="text-center">小計</th>
+  </tr>
+<!--カート商品一覧-->
+<% @cartitems.each do |cartitem| %>
+  <tr>
+    <!--商品コード-->
+    <td class="text-right"><%= cartitem.item.itemCodeNo %></td>
+    <!--品番-->
+    <td><%= cartitem.item.partNumber %></td>
+    <!--商品名-->
+    <td><%= cartitem.item.itemName %></td>
+    <!--金額-->
+    <td>
+      <% price = (cartitem.item.price).to_s %>
+      <% if price.end_with?(".0") %><!--整数なら-->
+          <% price = price.to_i %>
+        <%= number_to_currency(price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+      <% else %>
+        <%= number_to_currency(price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+      <% end %>
+    </td>
+    <!--数量-->
+    <td class="text-right"><%= cartitem.quantity %></td>
+    <!--小計-->
+    <% price = ((cartitem.item.price) * (cartitem.quantity)).to_s %>
+    <% if price.end_with?(".0") %><!--整数なら-->
+        <% price = price.to_i %>
+        <td><%= number_to_currency(price, :format => "%u%n", :precision => 0, :unit =>"¥") %></td>
+    <% else %>
+        <td><%= number_to_currency(price, :format => "%u%n", :precision => 1, :unit =>"¥") %></td>
+    <% end %>
+  </tr>
+<% end %>
+  <tr>
+    <td class="text-right" colspan="5">合計数</td>
+    <td class="text-right"><%= @total_count %>点</td>
+  </tr>
+  <tr>
+    <td class="text-right" colspan="5">合計金額</td>
+    <td class="text-right"><%= number_to_currency(@total_price, :format => "%u%n", :precision => 0, :unit =>"¥") %></td>
+  </tr>
+</table>

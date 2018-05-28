@@ -34,13 +34,9 @@
             <% @item.price = (@item.price).to_i %>
             <%= number_to_currency(@item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
         <% else %>
-            <%= number_to_currency(i@tem.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+            <%= number_to_currency(@item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
         <% end %>
       </td>
-    </tr>
-    <tr>
-      <th>出荷単位</th>
-      <td colspan="3"><%= @item.shippingUnit %></td>
     </tr>
     <tr>
       <th rowspan="3">出荷単位</th>

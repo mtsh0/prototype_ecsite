@@ -1,0 +1,153 @@
+<%= form_for(@item) do |f|%>
+  <% if @item.errors.any? %>
+    <!-- 問題がある場合 -->
+      <!-- エラー内容の表示 -->
+      <div class="alert alert-danger">
+        <h3><%= @item.errors.count %>件のエラーがあります</h3>
+        <ul>
+        <% @item.errors.full_messages.each do |msg| %>
+          <li><%= msg.html_safe %></li>
+        <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+<table>
+  <!-- 商品コード -->
+    <tr>
+      <div class="field">
+        <th><span>※</span><%= f.label :itemCodeNo, class:"control-label" %><br><span>(半角数字)</span></th>
+        <td colspan="3"><%= f.text_field :itemCodeNo, class: "form-control" %></td>
+      </div>
+    </tr>
+  <!-- 品番 -->
+    <tr>
+      <div class="field">
+        <th><span>※</span><%= f.label :partNumber, class:"control-label" %></th>
+        <td colspan="3"><%= f.text_field :partNumber, class: "form-control" %></td>
+      </div>
+    </tr>
+  <!-- 商品名 -->
+    <tr>
+      <div class="field">
+        <th><span>※</span><%= f.label :itemName, class:"control-label" %></th>
+        <td colspan="3"><%= f.text_field :itemName, :size => "60", class: "form-control" %></td>
+      </div>
+    </tr>
+
+  <!--商品メインジャンル-->
+    <tr>
+      <div class="field">
+        <th><span>※</span><%= f.label :genre_id, class:"control-label" %></th>
+        <td colspan="3"><%= f.collection_select(:genre_id, Genre.all, :id, :name) %></td>
+      </div>
+    </tr>
+  <!--商品メインジャンル-->
+  <tr>
+    <div class="field">
+      <th><span>※</span><%= f.label :subgenre_id, class:"control-label" %></th>
+      <td colspan="3"><%= f.collection_select(:subgenre_id, Subgenre.all, :id, :name) %></td>
+    </div>
+  </tr>
+  <!-- 商品説明 -->
+  <div class="field">
+    <tr>
+      <th><span>※</span><%= f.label :description, class:"control-label" %></th>
+      <td colspan="3"><%= f.text_area :description, :size => "60x5", class: "form-control" %></td>
+    </tr>
+  </div>
+  <!-- 注意事項 -->
+    <tr>
+      <div class="field">
+        <th><%= f.label :attention, class:"control-label" %></th>
+        <td colspan="3"><%= f.text_area :attention, :size => "60x5", class: "form-control" %></td>
+      </div>
+    </tr>
+  <!-- 価格 -->
+    <tr>
+      <div class="field">
+        <th><span>※</span><%= f.label :price, class:"control-label" %><br><span>(小数点第1位まで適用)</span></th>
+        <td colspan="3"><%= f.text_field :price, class: "form-control" %></td>
+      </div>
+    </tr>
+<!-- 画像 -->
+  <tr>
+  <!-- 見出し部分 -->
+    <th rowspan="3"><span>※</span>画像</th>
+    <div class="field">
+      <td><span>※</span><%= f.label :mainImage, class:"control-label" %></td>
+    </div>
+    <div class="field">
+      <td><%= f.label :image2, class:"control-label" %></td>
+    </div>
+    <div class="field">
+      <td><%= f.label :image3, class:"control-label" %></td>
+    </div>
+  </tr>
+  <!-- 画像部分 -->
+  <tr>
+  <!-- 画像部分 -->
+    <td>
+    <!-- メイン画像 -->
+      <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
+      <% if @item.mainImage? %>
+        <div class="thumbnail">
+          <%= image_tag @item.mainImage.url, :name => "image1" %>
+        </div>
+      <% else %>
+        <div class="thumbnail">
+          <%= image_tag '/assets/no-image.png', :name => "image1" %>
+        </div>
+      <% end %>
+    </td>
+    <td>
+    <!-- 画像2 -->
+      <% if @item.image2? %>
+        <div class="thumbnail">
+          <%= image_tag @item.image2.url %>
+        </div>
+      <% else %>
+        <div class="thumbnail">
+          <%= image_tag '/assets/no-image.png' %>
+        </div>
+      <% end %>
+      <!-- 画像削除 -->
+      <% if @item.persisted? && @item.image2? %>
+        <label>
+          <%= f.check_box :remove_image2 %>
+          画像を削除
+        </label>
+      <% end %>
+    </td>
+    <td>
+    <!-- 画像3 -->
+        <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
+        <% if @item.image3? %>
+          <div class="thumbnail">
+            <%= image_tag @item.image3.url %>
+          </div>
+        <% else %>
+          <div class="thumbnail">
+            <%= image_tag '/assets/no-image.png' %>
+          </div>
+        <% end %>
+        <!-- 画像削除 -->
+        <% if @item.persisted? && @item.image3? %>
+          <label>
+            <%= f.check_box :remove_image3 %>
+            画像を削除
+          </label>
+        <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td><%= f.file_field :mainImage, class: "form-control" %><%= f.hidden_field :mainImage_cache %></td>
+    <td><%= f.file_field :image2, class: "form-control" %><%= f.hidden_field :image2_cache %></td>
+    <td><%= f.file_field :image3, class: "form-control" %><%= f.hidden_field :image3_cache %></td>
+  </tr>
+</table>
+    <br>
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>

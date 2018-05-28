@@ -27,4 +27,22 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # relation
+  # has_one :cart, dependent: :destroy
+  has_many :addresses
+  has_many :cartitems
+
+  # ユーザー作成時にユーザーのカートも同時作成する
+  # http://gaku3601.hatenablog.com/entry/2014/08/24/205044
+  # before_create :build_default_cart
+
+  private
+
+  # def build_default_cart
+  #   build_cart
+  #   return true
+  # end
+
+
 end

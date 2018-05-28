@@ -14,5 +14,14 @@ class ApplicationController < ActionController::Base
     @osirase = Info.order(created_at: :desc).limit(3)
   end
 
+  def after_sign_in_path_for(resource_or_scope)
+    @addresses = Address.where(user_id: current_user.id)
+    if @addresses.blank?
+      new_address_path
+    else
+      # users_path
+      root_path
+    end
+  end
 
 end
