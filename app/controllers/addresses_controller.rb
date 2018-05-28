@@ -5,6 +5,7 @@ class AddressesController < ApplicationController
 
   def index
     @addresses = Address.includes(:prefecture).where(user_id: current_user.id)
+    set_user_profilelayout
   end
 
   def new
@@ -20,13 +21,19 @@ class AddressesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @address = Address.find_by(user_id: current_user.id)
+    set_user_profilelayout
+  end
 
-  def edit; end
+  def edit
+    set_user_profilelayout
+  end
 
   def update
+    @address.update(address_params)
     if @address.save
-      redirect_to addresses_path, success: '1つの住所が削除されました'
+      redirect_to address_path, success: '住所が変更されました'
     else
       render 'edit'
     end
@@ -34,19 +41,12 @@ class AddressesController < ApplicationController
 
   def destroy
     @address.destroy
-    redirect_to address_path, success: "削除されました"
+    redirect_to addresses_path, success: '削除されました'
   end
 
   private
     def set_address
       @address = Address.find(params[:id])
-    end
-
-    def set_layout
-      @addresses = Address.where(user_id: current_user.id)
-      if @addresses.blank?
-        layout 'no_link'
-      end
     end
 
     def address_params

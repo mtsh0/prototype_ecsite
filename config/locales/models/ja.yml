@@ -24,6 +24,6 @@ ja:
         description: "お知らせ詳細"
       user:
         email: "メールアドレス"
-        passward: "パスワード"
-        password_confirmation: "確認用パスワード"
+        passward: "新パスワード"
+        password_confirmation: "新パスワード(確認用)"
         remember_me: "次回から自動的にログイン"

@@ -1,64 +1,76 @@
 <div id="side-bar">
-  <!--商品検索-->
-  <!--商品番号検索-->
-  <!--ジャンル検索-->
-  <div class="accbox">
-    <!--新商品-->
-    <div class="new-items">
-      <label for="label1">新商品</label>
-      <input type="checkbox" id="label1" class="on-off">
-      <div class="show">
-        <div class="genrelist">- シュミットハンマー</div>
-        <div class="genrelist">- レーザー距離計</div>
-        <div class="genrelist">- ジャンル3</div>
-        <div class="genrelist">- ジャンル4</div>
+  <% if (controller.controller_name == 'registrations') && (controller.action_name == 'edit')%>
+    <div class="panel panel-success">
+      <div class="panel-heading">ユーザー情報</div>
+      <ul class="list-group">
+        <li class="list-group-item"><%= link_to '注文履歴', users_path %></li>
+          <li class="list-group-item"><%= link_to '配送先情報', address_path(current_user.id) %></li>
+          <li class="list-group-item"><%= link_to 'メールアドレス', user_path(current_user.id) %></li>
+          <li class="list-group-item"><%= link_to 'パスワードの変更', edit_user_registration_path %></li>
+          <li class="list-group-item"><%= link_to '退会する', edit_user_registration_path, method: :delete, data: {confirm: '退会してよろしいですか?'} %></li>
+        </ul>
       </div>
     </div>
-    <!--genre1-->
-    <div class="genre1">
-      <label for="label2">genre1</label>
-      <input type="checkbox" id="label2" class="on-off">
-      <div class="show">
-        <div class="genrelist">- genre1の子1</div>
-        <div class="genrelist">- genre1の子2</div>
-        <div class="genrelist">- genre1の子3</div>
-        <div class="genrelist">- genre1の子4</div>
+  <% else %>
+      <!--商品検索-->
+      <!--商品番号検索-->
+      <!--ジャンル検索-->
+      <div class="accbox">
+        <!--新商品-->
+        <div class="new-items">
+          <label for="label1">新商品</label>
+          <input type="checkbox" id="label1" class="on-off">
+          <div class="show">
+            <div class="genrelist">- シュミットハンマー</div>
+            <div class="genrelist">- レーザー距離計</div>
+            <div class="genrelist">- ジャンル3</div>
+            <div class="genrelist">- ジャンル4</div>
+          </div>
+        </div>
+        <!--genre1-->
+        <div class="genre1">
+          <label for="label2">genre1</label>
+          <input type="checkbox" id="label2" class="on-off">
+          <div class="show">
+            <div class="genrelist">- genre1の子1</div>
+            <div class="genrelist">- genre1の子2</div>
+            <div class="genrelist">- genre1の子3</div>
+            <div class="genrelist">- genre1の子4</div>
+          </div>
+        </div>
+        <!--genre2-->
+        <div class="genre2">
+          <label for="label3">genre2</label>
+          <input type="checkbox" id="label3" class="on-off">
+          <div class="show">
+            <div class="genrelist">- genre2の子1</div>
+            <div class="genrelist">- genre2の子2</div>
+            <div class="genrelist">- genre2の子3</div>
+            <div class="genrelist">- genre2の子4</div>
+          </div>
+        </div>
+        <!--genre3-->
+        <div class="genre3">
+          <label for="label4">genre3</label>
+          <input type="checkbox" id="label4" class="on-off">
+          <div class="show">
+            <div class="genrelist">- genre3の子1</div>
+            <div class="genrelist">- genre3の子2</div>
+            <div class="genrelist">- genre3の子3</div>
+            <div class="genrelist">- genre3の子4</div>
+          </div>
+        </div>
+        <!--genre4-->
+        <div class="genre4">
+          <label for="label5">genre4</label>
+          <input type="checkbox" id="label5" class="on-off">
+          <div class="show">
+            <div class="genrelist">- genre4の子1</div>
+            <div class="genrelist">- genre4の子2</div>
+            <div class="genrelist">- genre4の子3</div>
+            <div class="genrelist">- genre4の子2</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!--genre2-->
-    <div class="genre2">
-      <label for="label3">genre2</label>
-      <input type="checkbox" id="label3" class="on-off">
-      <div class="show">
-        <div class="genrelist">- genre2の子1</div>
-        <div class="genrelist">- genre2の子2</div>
-        <div class="genrelist">- genre2の子3</div>
-        <div class="genrelist">- genre2の子4</div>
-      </div>
-    </div>
-    <!--genre3-->
-    <div class="genre3">
-      <label for="label4">genre3</label>
-      <input type="checkbox" id="label4" class="on-off">
-      <div class="show">
-        <div class="genrelist">- genre3の子1</div>
-        <div class="genrelist">- genre3の子2</div>
-        <div class="genrelist">- genre3の子3</div>
-        <div class="genrelist">- genre3の子4</div>
-      </div>
-    </div>
-    <!--genre4-->
-    <div class="genre4">
-      <label for="label5">genre4</label>
-      <input type="checkbox" id="label5" class="on-off">
-      <div class="show">
-        <div class="genrelist">- genre4の子1</div>
-        <div class="genrelist">- genre4の子2</div>
-        <div class="genrelist">- genre4の子3</div>
-        <div class="genrelist">- genre4の子2</div>
-      </div>
-    </div>
+  <% end %>
 
-  </div>
-  <!--マーキング-->
-</div>

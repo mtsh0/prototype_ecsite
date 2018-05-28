@@ -8,11 +8,16 @@ class ApplicationController < ActionController::Base
 
   before_action :set_infos
 
-  private
+
 
   def set_infos
     @osirase = Info.order(created_at: :desc).limit(3)
   end
+
+  def set_user_profilelayout
+    render layout: 'profile_user'
+  end
+
 
   def after_sign_in_path_for(resource_or_scope)
     @addresses = Address.where(user_id: current_user.id)

@@ -1,0 +1,19 @@
+<% provide(:title, "配送先住所") %>
+<!--<h1>Addresses#show</h1>-->
+<!--<p>Find me in app/views/addresses/show.html.erb</p>-->
+<h2>配送先住所</h2>
+<h3>配送先氏名</h3>
+<p><%= @address.user_name %></p>
+
+<h3>配送先氏名(ふりがな)</h3>
+<p><%= @address.name_kana %></p>
+
+<h3>電話番号</h3>
+<p><%= @address.tel %></p>
+
+<h3>配送先住所</h3>
+<p>〒<%= @address.postalcode %></p>
+<p><%= @address.prefecture.name %><%= @address.city %><%= @address.street %></p>
+<p><%= @address.others %></p>
+
+<button class="btn btn-default btn-sm"><%= link_to '変更する', edit_address_path %></button>

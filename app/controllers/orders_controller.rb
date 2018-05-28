@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   protect_from_forgery except: :pay
 
   def index
-    @orders = Order.where(user_id: current_user.id).reverse_order
+    @orders = Order.all.reverse_order
   end
 
   def show

@@ -31,6 +31,14 @@
         <td class="text-center">未登録</td>
       <% end %>
 
+
+      <% unless order.dvendor_id == nil %>
+          <%= order.dvendor.name %>&emsp;<%= link_to '変更', "hoge-scheme://153.126.195.96
+?order_no=#{order.order_no}" %>
+      <% else %>
+          未登録&emsp;<button class="btn btn-default btn-sm"><%= link_to 'アプリで登録', "hoge-scheme://153.126.195.96
+?order_no=#{order.order_no}" %></button>
+      <% end %>
       <!--配送業者問い合わせ番号-->
       <% unless order.d_number.nil? %>
         <td class="text-center"></td>
