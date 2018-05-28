@@ -63,7 +63,12 @@ Rails.application.routes.draw do
 
   # googlemap用
   resources :positions
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+
   resources :users, only: [:index, :show]
   resources :addresses
   resources :contacts, except: [:edit, :update, :destroy]
