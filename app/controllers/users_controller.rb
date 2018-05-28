@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    layout 'profile_user'
+    @user = User.find(id: current_user.id)
   end
 end
