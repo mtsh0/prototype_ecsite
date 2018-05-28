@@ -33,9 +33,20 @@ class User < ActiveRecord::Base
   has_many :addresses
   has_many :cartitems
 
-  # ユーザー作成時にユーザーのカートも同時作成する
-  # http://gaku3601.hatenablog.com/entry/2014/08/24/205044
-  # before_create :build_default_cart
+
+  # allow users to update their accounts without passwords
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
 
   private
 
