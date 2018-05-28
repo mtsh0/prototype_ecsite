@@ -2,10 +2,10 @@
   <div class="panel panel-default">
     <div class="panel-heading">ユーザー情報</div>
     <ul class="list-group">
-      <li class="list-group-item"><%= link_to '注文履歴', orders_path %></li>
+      <li class="list-group-item"><%= link_to '注文履歴', users_path %></li>
       <li class="list-group-item">配送先の設定<%= link_to '配送先情報', address_path(user_id: current_user.id) %></li>
-      <li class="list-group-item">メールアドレス</li>
-      <li class="list-group-item">パスワードの変更</li>
+      <li class="list-group-item"><%= link_to 'メールアドレス', user_path %></li>
+      <li class="list-group-item"><%= link_to 'パスワードの変更', edit_user_password_path %></li>
     </ul>
   </div>
 </div>
