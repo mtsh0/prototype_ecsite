@@ -61,21 +61,29 @@
 
 Rails.application.routes.draw do
 
+
+  # 管理者用
   devise_for :managers, controllers: {
     sessions: 'managers/sessions',
     passwords: 'managers/passwords',
     registrations: 'managers/registrations'
   }
+  resources :managers, only: [:indes, show] do
+    collection do
+      get 'dashboard'
+    end
+  end
 
-
+  # ユーザー用
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
+  resources :users, only: [:index, :show]
+
   # googlemap用
   resources :positions
-  resources :users, only: [:index, :show]
   resources :addresses
   resources :contacts, except: [:edit, :update, :destroy]
   resources :genres
