@@ -71,3 +71,6 @@
     <td class="text-right"><%= number_to_currency(@total_price, :format => "%u%n", :precision => 0, :unit =>"¥") %></td>
   </tr>
 </table>
+
+<p><%= link_to 'トップ画面へ戻る', root_path %></p>
+<p><%= link_to '注文履歴一覧へ', orders_path %></p>
