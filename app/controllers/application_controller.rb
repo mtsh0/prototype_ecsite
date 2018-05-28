@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_infos
+  before_action :set_manager_layout
 
 
 
@@ -18,15 +19,26 @@ class ApplicationController < ActionController::Base
     render layout: 'profile_user'
   end
 
-
-  def after_sign_in_path_for(resource_or_scope)
-    @addresses = Address.where(user_id: current_user.id)
-    if @addresses.blank?
-      new_address_path
-    else
-      # users_path
-      root_path
+  def set_manager_layout
+    if manager_signed_in?
+      render layout: 'manager_layout'
     end
   end
 
+
+  def after_sign_in_path_for(resource_or_scope)
+    if user_signed_in?
+      @addresses = Address.where(user_id: current_user.id)
+      if @addresses.blank?
+        new_address_path
+      else
+        # users_path
+        root_path
+      end
+    end
+
+    if manager_signed_in?
+        managers_dashboard_path
+    end
+  end
 end
