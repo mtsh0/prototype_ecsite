@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <meta http-equiv="content-language" content="ja">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!--ファビコン-->
+  <%= favicon_link_tag %>
+</head>
+<body class='<%= "#{controller.controller_name}" %>'>
+
+<%= render 'layouts/user/firstvisit/header' %><!--header-->
+<div class="container">
+  <!-- main -->
+  <main class='<%= "#{controller.action_name}" %>'>
+    <!--フラッシュメッセージ-->
+    <% flash.each do |name, msg| %>
+        <% name = "success" if name == "notice" %>
+        <% name = "danger" if name == "alert" %>
+        <div class="alert alert-<%= name %>">
+          <%= msg.html_safe %>
+        </div>
+    <% end %>
+
+    <!--かくコンテンツ部分へ-->
+    <%= yield %>
+  </main>
+</div><!--#container-->
+<%= render "layouts/user/footer" %><!--フッター部分-->
+</body>
+</html>
