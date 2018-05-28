@@ -2,70 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5265269a-daf6-46aa-a939-15ed7e8379f8" name="デフォルト" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/carts/_cart_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/carts/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/no_link.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/user/firstvisit/_header.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/orders/show.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/setting.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180317104458_create_items.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180317104838_add_softdestroyed_to_item.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180317105101_add_imagecolumns_to_item.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180317114216_devise_create_users.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180321114614_create_infos.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180322133843_add_infomations_to_item.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180322134907_create_genres.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180322135115_add_column_subgenre_to_item.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180322135549_create_subgenres.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180322135720_remove_column_genreid_to_genre.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180324132226_create_contacts.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180424102315_create_profiles.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20180504055056_create_positions.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/items/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/items/_item_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sk-t.ueno-halnagoya.iml" afterPath="$PROJECT_DIR$/.idea/sk-t.ueno-halnagoya.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/items_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/top_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/top_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact.rb" afterPath="$PROJECT_DIR$/app/models/contact.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/genre.rb" afterPath="$PROJECT_DIR$/app/models/genre.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/info.rb" afterPath="$PROJECT_DIR$/app/models/info.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/item.rb" afterPath="$PROJECT_DIR$/app/models/item.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/position.rb" afterPath="$PROJECT_DIR$/app/models/position.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/profile.rb" afterPath="$PROJECT_DIR$/app/models/profile.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/subgenre.rb" afterPath="$PROJECT_DIR$/app/models/subgenre.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/items/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/index.html.erb" afterPath="$PROJECT_DIR$/app/views/items/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/new.html.erb" afterPath="$PROJECT_DIR$/app/views/items/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/preview.html.erb" afterPath="$PROJECT_DIR$/app/views/items/preview.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/items/show.html.erb" afterPath="$PROJECT_DIR$/app/views/items/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/user/_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/user/_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/user/_sidebar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/user/_sidebar.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/positions/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/positions/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/positions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/positions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ja.yml" afterPath="$PROJECT_DIR$/config/locales/ja.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/contacts.yml" afterPath="$PROJECT_DIR$/test/fixtures/contacts.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/genres.yml" afterPath="$PROJECT_DIR$/test/fixtures/genres.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/infos.yml" afterPath="$PROJECT_DIR$/test/fixtures/infos.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/items.yml" afterPath="$PROJECT_DIR$/test/fixtures/items.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/positions.yml" afterPath="$PROJECT_DIR$/test/fixtures/positions.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/profiles.yml" afterPath="$PROJECT_DIR$/test/fixtures/profiles.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/subgenres.yml" afterPath="$PROJECT_DIR$/test/fixtures/subgenres.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/contact_test.rb" afterPath="$PROJECT_DIR$/test/models/contact_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/genre_test.rb" afterPath="$PROJECT_DIR$/test/models/genre_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/info_test.rb" afterPath="$PROJECT_DIR$/test/models/info_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/item_test.rb" afterPath="$PROJECT_DIR$/test/models/item_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/position_test.rb" afterPath="$PROJECT_DIR$/test/models/position_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/profile_test.rb" afterPath="$PROJECT_DIR$/test/models/profile_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/subgenre_test.rb" afterPath="$PROJECT_DIR$/test/models/subgenre_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -84,12 +21,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/positions/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="102">
+                <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -513,12 +453,12 @@
       <workItem from="1526800883030" duration="28392000" />
       <workItem from="1527144794800" duration="1567000" />
       <workItem from="1527362509654" duration="20962000" />
-      <workItem from="1527417461151" duration="8845000" />
+      <workItem from="1527417461151" duration="9112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157180000" />
+    <option name="totallyTimeSpent" value="157447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -928,22 +868,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/app/views/positions/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/positions/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
