@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
-      redirect_to item_path(@item), notice: "変更しました"
+      redirect_to item_path(@item), success: "変更しました"
     else
       render 'edit'
     end

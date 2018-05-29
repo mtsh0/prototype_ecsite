@@ -68,7 +68,7 @@ Rails.application.routes.draw do
     passwords: 'managers/passwords',
     registrations: 'managers/registrations'
   }
-  resources :managers, only: [:indes, show] do
+  resources :managers, only: [:indes, :show] do
     collection do
       get 'dashboard'
     end
@@ -86,7 +86,7 @@ Rails.application.routes.draw do
   resources :positions
   resources :addresses
   resources :contacts, except: [:edit, :update, :destroy]
-  resources :genres
+  resources :genres, except: [:show]
   resources :infos, except: [:show]
   resources :items do
     member do
@@ -100,7 +100,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :orders, only: [:index, :new, :create, :show] do
+  resources :orders, except: [:destroy] do
     collection do
       post 'pay'
     end

@@ -1,10 +1,9 @@
 <% provide(:title, "商品詳細") %>
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
-
+<!--<h1>Items#show</h1>-->
+<!--<p>Find me in app/views/items/show.html.erb</p>-->
+<h1>商品の詳細</h1>
 <br>
 <table>
-  <caption>商品詳細</caption>
     <tr>
       <th>商品コード</th>
       <td colspan="3"><%= @item.itemCodeNo %></td>
@@ -63,16 +62,4 @@
     </tr>
 </table>
 <br>
-<br>
-<%= link_to '編集する(editアクションへ)', edit_item_path %>
-<br>
-<br>
-<%= link_to '削除する(destroyアクションへ)', item_path(@item.id), method: :delete, data: {confirm: "本当に削除しますか?"} %>
-<br>
-<br>
-<%= link_to 'indexアクションへ', items_path %>
-<br>
-<br>
-<%= link_to 'newアクションへ', new_item_path %>
-<br>
-<br>
+<p><button class="btn btn-default btn-xs"><%= link_to '編集する', edit_item_path %></button>　<button class="btn btn-default btn-xs"><%= link_to '削除する', item_path(@item.id), method: :delete, data: {confirm: "本当に削除しますか?"} %></button>　<button class="btn btn-default btn-xs"><%= link_to '商品一覧へ', items_path %></button>　<button class="btn btn-default btn-xs"><%= link_to '商品を登録する', new_item_path %></button></p>

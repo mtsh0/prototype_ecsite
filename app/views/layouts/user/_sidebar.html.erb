@@ -1,15 +1,29 @@
 <div id="side-bar">
-  <% if (controller.controller_name == 'registrations') && (controller.action_name == 'edit') %>
+  <% if manager_signed_in? %>
       <div class="panel panel-success">
-        <div class="panel-heading">ユーザー情報</div>
+        <div class="panel-heading">項目</div>
         <ul class="list-group">
-          <li class="list-group-item"><%= link_to '注文履歴', users_path %></li>
-          <li class="list-group-item"><%= link_to '配送先情報', address_path(current_user.id) %></li>
-          <li class="list-group-item"><%= link_to 'メールアドレス', user_path(current_user.id) %></li>
-          <li class="list-group-item"><%= link_to 'パスワードの変更', edit_user_registration_path %></li>
-          <li class="list-group-item"><%= link_to '退会する', edit_user_registration_path, method: :delete, data: {confirm: '退会してよろしいですか?'} %></li>
+          <li class="list-group-item"><%= link_to '注文一覧', orders_path %></li>
+          <li class="list-group-item"><%= link_to 'お知らせ情報', infos_path %></li>
+          <li class="list-group-item"><%= link_to '商品一覧', items_path %></li>
+          <li class="list-group-item"><%= link_to 'ジャンル情報', genres_path %></li>
+          <!--<li class="list-group-item"><%# link_to 'サブジャンル情報', infos_path %></li>-->
+          <li class="list-group-item"><%= link_to 'GoogleMap用', positions_path %></li>
+          <!--<li class="list-group-item"><%# link_to '配送業者情報', positions_path %></li>-->
+          <li class="list-group-item"><%= link_to 'ログアウト', destroy_manager_session_path %></li>
         </ul>
       </div>
+  <% elsif (controller.controller_name == 'registrations') && (controller.action_name == 'edit') %>
+      <div class="panel panel-success">
+        <div class="panel-heading">ユーザー情報</div>
+          <ul class="list-group">
+            <li class="list-group-item"><%= link_to '注文履歴', users_path %></li>
+            <li class="list-group-item"><%= link_to '配送先情報', address_path(current_user.id) %></li>
+            <li class="list-group-item"><%= link_to 'メールアドレス', user_path(current_user.id) %></li>
+            <li class="list-group-item"><%= link_to 'パスワードの変更', edit_user_registration_path %></li>
+            <li class="list-group-item"><%= link_to '退会する', edit_user_registration_path, method: :delete, data: {confirm: '退会してよろしいですか?'} %></li>
+            <li class="list-group-item"><%= link_to 'ログアウト', destroy_user_session_path %></li>
+          </ul>
       </div>
   <% else %>
       <!--商品検索-->

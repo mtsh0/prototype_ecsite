@@ -1,0 +1,18 @@
+<!--<p>Find me in app/views/orders/_orders_form.html.erb</p>-->
+<h1>配送状況の登録</h1>
+
+<%= form_for(@order) do |f| %>
+  <!--配送業者-->
+  <label>配送業者</label><br>
+  <p><%= f.collection_select(:dvendor_id, Dvendor.all, :id, :name) %></p>
+
+  <!--問い合わせ番号-->
+  <label>問い合わせ番号(半角数字のみ)</label><br>
+  <p><%= f.text_field :d_number %></p>
+
+  <p>
+    <div class="action">
+      <%= f.submit @submit %>
+    </div>
+  </p>
+<% end %>

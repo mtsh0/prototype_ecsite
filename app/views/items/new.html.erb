@@ -1,11 +1,8 @@
 <% provide(:title, "商品情報の追加") %>
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
-<h2>商品登録画面</h2>
+<!--<h1>Items#new</h1>-->
+<!--<p>Find me in app/views/items/new.html.erb</p>-->
+<h3>商品登録画面</h3>
 
 <%= render 'item_form' %>
 <br>
-<%= link_to 'indexアクションへ', items_path %>
-<br>
-<br>
-<%= link_to 'newアクションへ', new_item_path %>
+<button class="btn btn-default btn-xs"><%= link_to '商品一覧へ', items_path %></button>

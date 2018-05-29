@@ -1,7 +1,7 @@
 <% provide(:title, "おしらせの追加") %>
-<h1>Infos#new</h1>
-<p>Find me in app/views/infos/new.html.erb</p>
+<!--<h3>Infos#new</h3>-->
+<!--<p>Find me in app/views/infos/new.html.erb</p>-->
+<h3>お知らせ情報の登録</h3>
+<%= render 'info_form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'indexページへ', infos_path %>
+<button class="btn btn-default btn-xs"><%= link_to 'お知らせ一覧へ', infos_path %></button>

@@ -7,6 +7,9 @@
 #
 
 class Genre < ActiveRecord::Base
+  #validation
+  validates :name, presence: true
+
   # relation
   has_many :items
   has_many :subgenres

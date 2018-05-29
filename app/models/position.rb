@@ -13,4 +13,10 @@
 #
 
 class Position < ActiveRecord::Base
+  # validation
+  validates :title, presence: true
+  validates :description, presence: true
+  validates :address, presence: true
+  validates :latitude, numericality: true
+  validates :longitude, numericality: true
 end

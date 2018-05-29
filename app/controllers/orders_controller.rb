@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @cartitems = Cartitem.includes(:item).where(order_id: @order.id)
-    @address = Address.find_by(user_id: current_user.id)
+    @address = Address.find_by(user_id: @order.user_id)
     @total_count = 0
     @total_price = 0
     @cartitems.each do |cartitem|
@@ -19,20 +19,31 @@ class OrdersController < ApplicationController
     # binding.pry
   end
 
-  def new
-    # ユーザーの住所idを渡す
-    @address = Address.find_by(user_id: current_user.id)
-  end
+  def new; end
 
   def create; end
 
+  def edit
+    @order = Order.find(params[:id])
+    @submit = '登録する'
+  end
+
+  def update
+    # binding.pry
+    @order = Order.find(params[:id])
+    binding.pry
+    # @order.update(trackable_params)
+
+    if @order.update(trackable_params)
+      redirect_to order_path(@order), success: "#{@order.order_no}の配送状況が登録されました"
+    else
+
+    end
+  end
 
   def pay
     # クレジット決済
-    # binding.pry
     Payjp.api_key = 'sk_test_5856604ca5d22e70cf473d39'
-
-    # Pay::Token.new
 
     # クレジット決済(payjp)用のトークン作成
     token = Payjp::Token.create(
@@ -45,15 +56,12 @@ class OrdersController < ApplicationController
       }
     )
 
-    # binding.pry
     # クレジット決済による売上登録(payjp)
     charge = Payjp::Charge.create(
         :amount => @total_price,
         :card => token.id,
         :currency => 'jpy'
     )
-
-    # binding.pry
 
     # 注文の保存
     @order = Order.new(order_params)
@@ -114,5 +122,10 @@ class OrdersController < ApplicationController
 
   def order_params
     params.permit(:order_no, :user_id, :total_price, :address_id, :dvendor_id, :d_number)
+  end
+
+  def trackable_params
+    params.require(:order).permit(:order_no, :user_id, :total_price, :address_id, :dvendor_id, :d_number)
+
   end
 end

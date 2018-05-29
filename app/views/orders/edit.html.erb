@@ -1,3 +1,8 @@
+<% provide(:title, '配送情報の登録') %>
+<!--<h1>Orders#edit</h1>-->
+<!--<p>Find me in app/views/orders/edit.html.erb</p>-->
+<h3>配送状況の登録</h3>
 
-<h1>Orders#new</h1>
-<p>Find me in app/views/orders/new.html.erb</p>
+<%= render 'order_form' %>
+
+<button class="btn btn-default btn-xs"><%= link_to '注文一覧へ', orders_path %></button>

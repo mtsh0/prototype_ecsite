@@ -2,6 +2,9 @@ ja:
   activerecord:
     models:
       # item:
+      # order:
+#      genre:
+#        name: "ジャンル名"
     attributes:
       item:
         id: "ID"
@@ -27,3 +30,21 @@ ja:
         passward: "新パスワード"
         password_confirmation: "新パスワード(確認用)"
         remember_me: "次回から自動的にログイン"
+      order:
+        d_number: "問い合わせ番号"
+      position:
+        title: "見出し"
+        description: "説明"
+        address: "住所"
+        latitude: "緯度"
+        longitude: "経度"
+#      genre:
+#        name: "ジャンル名”
+    errors:
+      model:
+        order:
+          attributes:
+            d_number:
+              too_short: "は10文字以上12文字以下で入力してください"
+              too_long: "は10文字以上12文字以下で入力してください"
+

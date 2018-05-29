@@ -1,7 +1,10 @@
 <% provide(:title, "商品一覧") %>
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<!--<h1>Items#index</h1>-->
+<!--<p>Find me in app/views/items/index.html.erb</p>-->
+<h3>商品一覧</h3>
 <br>
+<p><button class="btn btn-xs btn-default"><%= link_to '商品を登録する', new_item_path %></button></p>
+
 <% unless @items.blank? %>
   <table>
       <tr>
@@ -10,6 +13,7 @@
         <th class="cell-3">品番</th>
         <th class="cell-4">商品名</th>
         <th class="cell-5">価格</th>
+        <th>登録日</th>
         <th>詳細</th>
       </tr>
       <% @items.each do |item| %>
@@ -27,7 +31,8 @@
                 <%= number_to_currency(item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
             <% end %>
           </td>
-          <td class="cell-7th"><%= link_to '詳細', item_path(item.id) %></td>
+          <td><%= item.created_at.strftime("%y/%m/%d") %></td>
+          <td class="cell-7th"><button class="btn btn-xs btn-default"><%= link_to '詳細', item_path(item.id) %></button></td>
         </tr>
       <% end %>
   </table>
@@ -39,7 +44,7 @@
 <%= paginate @items %>
 
 <br>
-<%= link_to '新規登録(newアクションへ)', new_item_path %>
+
 <br>
 <br>
 <% if false %><%= link_to 'indexアクションへ', items_path %><% end %>
