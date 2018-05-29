@@ -34,16 +34,16 @@
 
         <!--配送業者問い合わせ番号-->
         <% unless order.d_number.nil? %>
-            <td class="text-center"></td>
+            <td class="text-center"><%= order.d_number %></td>
         <% else %>
             <td class="text-center">未登録</td>
         <% end %>
 
         <!--注文詳細-->
-        <td class="text-center"><%= link_to '詳細', order_path(order.id) %></td>
+        <td class="text-center"><button class="btn btn-default btn-xs"><%= link_to '詳細', order_path(order.id) %></button></td>
         <!--配送状況確認-->
         <% unless ((order.dvendor_id == nil) || (order.d_number == nil)) %>
-            <td class="text-center"><%= link_to '確認(別サイトへ)', "http://thira.plavox.info/transport/api/?t=#{order.dvendor.for_api_name}&no=#{order.d_number}", target: '_blank' %></td>
+            <td class="text-center"><button class="btn btn-default btn-xs"><%= link_to '確認(別サイトへ)', "http://thira.plavox.info/transport/api/?t=#{order.dvendor.for_api_name}&no=#{order.d_number}", target: '_blank' %></button></td>
         <% else %>
             <td class="text-center">未登録</td>
         <% end %>
