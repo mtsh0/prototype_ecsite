@@ -6,24 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# 商品テーブルのデータ
-75.times.each do |num|
-  Item.create(
-      itemCodeNo: num,
-      partNumber: "ITEM-#{num}",
-      itemName:"商品-#{num}",
-      genre_id: rand(1..5),
-      subgenre_id: rand(1..5),
-      price: rand(1..100000),
-      description: "商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。",
-      attention: nil,
-      mainImage: File.open("#{Rails.root}/db/fixtures/#{num}_1.jpg"),
-      image2: File.open("#{Rails.root}/db/fixtures/#{num}_2.jpg"),
-      image3: File.open("#{Rails.root}/db/fixtures/#{num}_3.jpg"),
-      created_at: (Time.local(2018, 4, 1, 0, 0, 0) + (num * 60)),
-      updated_at: nil
-  )
-end
+# Position(googlemap位置情報)テーブルのデータ
+Position.create(title: "東京", description: "就職希望エリア", address: "東京", latitude: 35.681241, longitude: 139.767041)
+Position.create(title: "HAL名古屋", description: "勉強場所", address: "名古屋市中村区 名駅4丁目27−1", latitude: 35.168266, longitude: 136.885762)
+Position.create(title: "岐阜市", description: "出身地", address: "岐阜県岐阜市", latitude: 35.409570, longitude: 136.757041)
+Position.create(title: "名古屋市", description: "現住所", address: "愛知県中村区名駅南", latitude: 35.171152, longitude: 136.881558)
 
 
 # 配達業者テーブルのデータ
@@ -33,6 +20,31 @@ Dvendor.create(name: "佐川急便", for_api_name: "sagawa", created_at: nil, up
 Dvendor.create(name: "ゆうパック", for_api_name: "jppost_pack", created_at: nil, updated_at: nil)
 Dvendor.create(name: "郵便書留", for_api_name: "jppost_mail", created_at: nil, updated_at: nil)
 Dvendor.create(name: "福山通運", for_api_name: "fukutsu", created_at: nil, updated_at: nil)
+
+
+
+# 商品テーブルのデータ
+75.times.each do |num|
+  item = Item.create(
+        itemCodeNo: num+1,
+        partNumber: "ITEM-#{num+1}",
+        itemName:"商品-#{num+1}",
+        genre_id: rand(1..5),
+        subgenre_id: rand(1..5),
+        price: rand(1..100000),
+        description: "商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。",
+        attention: nil,
+        mainImage: File.open("#{Rails.root}/db/fixtures/#{num+1}_1.jpg"),
+        image2: File.open("#{Rails.root}/db/fixtures/#{num+1}_2.jpg"),
+        image3: File.open("#{Rails.root}/db/fixtures/#{num+1}_3.jpg"),
+        created_at: (Time.local(2018, 4, 1, 0, 0, 0) + (num * 60)),
+        updated_at: nil
+    )
+  item.save!
+end
+
+
+
 
 # ジャンルテーブルのデータ
 Genre.create(name: "ジャンル1")
@@ -108,8 +120,12 @@ Prefecture.create(name: "鹿児島県")
 Prefecture.create(name: "沖縄県")
 
 
-# Position(googlemap位置情報)テーブルのデータ
-Position.create(title: "東京", description: "就職希望エリア", address: "東京", latitude: 35.681241, longitude: 139.767041)
-Position.create(title: "HAL名古屋", description: "勉強場所", address: "名古屋市中村区 名駅4丁目27−1", latitude: 35.168266, longitude: 136.885762)
-Position.create(title: "岐阜市", description: "出身地", address: "岐阜県岐阜市", latitude: 35.409570, longitude: 136.757041)
-Position.create(title: "名古屋市", description: "現住所", address: "愛知県中村区名駅南", latitude: 35.171152, longitude: 136.881558)
+Manager.create(
+  email: '999@gmail.com',
+    password: 'lolo1212'
+)
+
+User.create(
+    email: '1@gmail.com',
+    password: 'lolo1212'
+)

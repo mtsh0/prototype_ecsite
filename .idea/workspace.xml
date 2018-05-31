@@ -2,304 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5265269a-daf6-46aa-a939-15ed7e8379f8" name="デフォルト" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/10_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/10_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/11_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/11_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/11_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/12_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/12_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/12_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/13_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/13_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/13_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/14_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/14_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/14_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/15_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/15_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/15_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/16_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/16_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/16_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/17_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/17_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/17_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/18_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/18_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/18_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/19_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/19_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/19_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/1_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/1_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/1_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/20_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/20_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/20_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/21.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/21_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/21_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/21_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/22_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/22_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/22_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/23.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/23_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/23_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/23_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/24_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/24_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/24_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/25_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/25_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/25_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/26.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/26_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/26_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/26_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/27.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/27_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/27_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/27_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/28.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/28_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/28_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/28_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/29.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/29_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/29_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/29_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/2_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/2_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/2_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/30_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/30_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/30_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/31.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/31_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/31_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/31_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/32.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/32_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/32_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/32_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/33.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/33_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/33_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/33_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/34.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/34_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/34_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/34_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/35.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/35_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/35_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/35_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/36.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/36_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/36_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/36_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/37.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/37_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/37_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/37_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/38.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/38_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/38_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/38_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/39.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/39_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/39_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/39_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/3_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/3_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/3_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/40.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/40_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/40_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/40_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/41.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/41_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/41_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/41_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/42.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/42_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/42_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/42_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/43.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/43_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/43_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/43_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/44.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/44_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/44_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/44_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/45.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/45_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/45_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/45_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/46.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/46_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/46_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/46_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/47.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/47_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/47_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/47_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/48.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/48_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/48_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/48_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/49.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/49_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/49_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/49_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/4_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/4_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/4_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/50.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/50_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/50_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/50_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/51.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/51_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/51_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/51_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/52.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/52_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/52_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/52_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/53.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/53_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/53_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/53_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/54.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/54_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/54_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/54_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/55.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/55_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/55_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/55_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/56.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/56_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/56_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/56_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/57.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/57_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/57_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/57_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/58.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/58_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/58_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/58_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/59.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/59_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/59_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/59_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/5_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/5_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/5_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/60.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/60_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/60_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/60_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/61.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/61_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/61_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/61_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/62.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/62_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/62_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/62_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/63.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/63_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/63_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/63_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/64.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/64_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/64_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/64_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/65.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/65_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/65_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/65_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/66.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/66_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/66_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/66_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/67.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/67_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/67_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/67_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/68.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/68_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/68_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/68_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/69.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/69_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/69_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/69_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/6_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/6_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/6_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/70.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/70_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/70_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/70_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/71.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/71_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/71_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/71_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/72.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/72_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/72_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/72_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/73.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/73_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/73_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/73_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/74.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/74_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/74_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/74_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/75_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/75_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/75_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/7_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/7_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/7_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/8_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/8_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/8_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/9_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/9_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/fixtures/9_3.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
@@ -334,8 +36,8 @@
       <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="-700">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -345,7 +47,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>配送</find>
       <find>link_to</find>
       <find>hidden_</find>
       <find>value</find>
@@ -375,6 +76,7 @@
       <find>production</find>
       <find>注文履歴</find>
       <find>商品サンプル</find>
+      <find>my</find>
     </findStrings>
     <replaceStrings>
       <replace>address</replace>
@@ -447,6 +149,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="640" />
@@ -498,105 +203,6 @@
             <path>
               <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
               <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="addresses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="carts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="items" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="firstvisit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="passwords" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="registrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -609,6 +215,12 @@
               <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
               <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="fixtures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
@@ -865,17 +477,18 @@
       <workItem from="1527362509654" duration="20962000" />
       <workItem from="1527417461151" duration="14676000" />
       <workItem from="1527517592162" duration="33514000" />
-      <workItem from="1527745520020" duration="1096000" />
+      <workItem from="1527745520020" duration="4103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209953000" />
+    <option name="totallyTimeSpent" value="212960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20193861" sideWeight="0.49080622" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20193861" sideWeight="0.49080622" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956153" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -932,21 +545,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/10.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/11.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/12.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/27.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1160,10 +758,34 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="119" column="20" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        <state relative-caret-position="-700">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
