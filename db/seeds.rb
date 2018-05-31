@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # 商品テーブルのデータ
-100.times.each do |num|
+75.times.each do |num|
   Item.create(
       itemCodeNo: num,
       partNumber: "ITEM-#{num}",
@@ -17,9 +17,9 @@
       price: rand(1..100000),
       description: "商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。",
       attention: nil,
-      mainImage: nil,
-      image2: nil,
-      image3: nil,
+      mainImage: File.open("#{Rails.root}/db/fixtures/#{num}_1.jpg"),
+      image2: File.open("#{Rails.root}/db/fixtures/#{num}_2.jpg"),
+      image3: File.open("#{Rails.root}/db/fixtures/#{num}_3.jpg"),
       created_at: (Time.local(2018, 4, 1, 0, 0, 0) + (num * 60)),
       updated_at: nil
   )
