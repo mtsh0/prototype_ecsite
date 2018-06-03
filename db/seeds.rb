@@ -40,7 +40,9 @@ Dvendor.create(name: '福山通運', for_api_name: 'fukutsu', created_at: nil, u
         image3: File.open("#{Rails.root}/db/fixtures/#{num+1}_3.jpg"),
         created_at: (Time.local(2018, 4, 1, 0, 0, 0) + (num * 60)),
         updated_at: nil
+
     )
+  # binding.pry
   item.save!
 end
 
