@@ -29,5 +29,9 @@ module SkTUenoHalnagoya
     # Rails で I18n を使って日本語化
     # https://qiita.com/yutackall/items/0ff97132f31e5bacbf00
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+      html_tag
+    end
   end
 end
