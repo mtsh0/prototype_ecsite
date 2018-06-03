@@ -1,0 +1,450 @@
+@charset "UTF-8";
+/* 共通css
+========================================================================== */
+/* line 5, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+.text_left {
+  text-align: left;
+}
+
+/* line 8, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+.text_center {
+  text-align: center;
+}
+
+/* line 12, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+.text_right {
+  text-align: right;
+}
+
+/* line 16, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+a {
+  color: #808080;
+  text-decoration: none;
+}
+/* line 21, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+a:hover {
+  color: #808080;
+  opacity: 0.4;
+}
+
+/* line 27, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+table {
+  border-spacing: 0;
+}
+/* line 30, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+table thead th {
+  border: solid 2px lightgrey;
+  border-collapse: collapse;
+}
+/* line 36, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+table tbody td {
+  border: solid 2px lightgrey;
+  border-collapse: collapse;
+}
+
+/* line 43, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+.max-width {
+  width: 100%;
+}
+
+/* 当ホームページ用レイアウト
+========================================================================== */
+@media screen and (min-width: 765px) {
+  /* line 55, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  html {
+    overflow: auto;
+  }
+
+  /* line 59, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  body {
+    overflow-x: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /*ヘッダー部分*/
+  /* line 67, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  header {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #4caf50;
+    /*ロゴ(左寄せ)*/
+    /*右寄せ用タグ*/
+    /*//ログイン・ログアウト*/
+    /*//検索部分*/
+  }
+  /* line 78, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  header #logo {
+    margin-right: auto;
+  }
+  /* line 83, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  header #right {
+    /*width:300px;*/
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* line 90, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  header #right {
+    display: flex;
+  }
+  /* line 95, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  header #login-out {
+    margin: 5px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #ffee5a;
+  }
+
+  /*//グローバルナビゲーション*/
+  /* line 109, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #menu-bar {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: center;
+    background-color: #43A047;
+  }
+  /* line 116, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #menu-bar #main-menu {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /*//ナビ項目*/
+  }
+  /* line 125, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #menu-bar #main-menu .menu-column {
+    flex-basis: 25%;
+    height: 65px;
+    line-height: 65px;
+    font-size: 23px;
+    color: #FFFFFF;
+    border: solid 2px #BBBBBB;
+    border-collapse: collapse;
+  }
+
+  /* line 140, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #deliveryCharge {
+    width: 1000px;
+    margin: 0 auto;
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  /* line 152, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    width: 1000px;
+    border: solid 2px #B00100;
+    margin: 0 auto;
+  }
+
+  /*//サイドバー*/
+  /* line 166, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar {
+    width: 220px;
+    /*//詳細の表示切り替え*/
+    /*//アイコンを入れ替える*/
+    /*//各ジャンルの色指定*/
+    /*//新商品*/
+    /*//ジャンル1*/
+    /*//ジャンル2*/
+    /*//ジャンル3*/
+  }
+  /* line 170, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar #shipping-defayment {
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+  /* line 175, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar #side-bar-title1 {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+  /* line 188, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .accbox {
+    color: #FFFFFF;
+    /*//中身を非表示にしておく*/
+  }
+  /* line 191, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .accbox label {
+    font-size: 25px;
+    font-style: italic;
+    line-height: 50px;
+    margin-left: 20px;
+    height: 50px;
+    width: 220px;
+    cursor: pointer;
+    display: block;
+    /*//矢印を付加する*/
+  }
+  /* line 201, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .accbox label:hover {
+    opacity: 0.4;
+  }
+  /* line 206, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .accbox label:before {
+    content: '\f054';
+    font-family: 'FontAwesome';
+    padding-right: 8px;
+  }
+  /* line 214, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .accbox input {
+    display: none;
+  }
+  /* line 219, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .accbox .show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+  }
+  /* line 230, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .on-off:checked + .show {
+    height: auto;
+    opacity: 1;
+    transition: 0.8s;
+  }
+  /* line 237, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .on-off:checked + label:before {
+    font-family: 'FontAwesome';
+    content: '\f078';
+  }
+  /* line 242, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .genrelist {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    border-top: solid 1.5px #BBBBBB;
+    border-collapse: collapse;
+  }
+  /* line 249, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .genrelist:hover {
+    opacity: 0.4;
+  }
+  /* line 253, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .genrelist:last-child {
+    border-bottom: solid 1.5px #BBBBBB;
+  }
+  /* line 260, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .new-items {
+    background-color: #FDD835;
+  }
+  /* line 265, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .genre1 {
+    background-color: #AED581;
+  }
+  /* line 269, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .genre2 {
+    background-color: #F8BBD0;
+  }
+  /* line 274, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .genre3 {
+    background-color: #90CAF9;
+  }
+  /* line 278, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #side-bar .genre4 {
+    background-color: #9575CD;
+  }
+
+  /* line 286, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  main {
+    width: 780px;
+    min-height: 800px;
+  }
+
+  /* line 291, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  footer {
+    display: flex;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    background-color: #4caf50;
+  }
+  /* line 298, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  footer #copyright {
+    font-size: 17px;
+    color: #FFFFFF;
+    opacity: 0.4;
+  }
+
+  /*//右上部分のハンバーガーメニュー用css*/
+  /*//https://www.nxworld.net/tips/12-css-hamburger-menu-active-effect.html*/
+  /*//1. 中央のラインが消え、上下のラインでクローズボタンに*/
+  /* line 308, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+
+  /* line 314, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger {
+    position: relative;
+    width: 50px;
+    height: 44px;
+  }
+
+  /* line 319, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  /* line 327, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+
+  /* line 330, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger span:nth-of-type(2) {
+    top: 20px;
+  }
+
+  /* line 333, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  /* line 337, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+  }
+
+  /* line 341, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  /* line 344, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  .menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+  }
+
+  /*//devise用css*/
+  /*//ログイン用*/
+  /* line 354, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* line 360, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 300px;
+    border: 2px solid #999999;
+  }
+  /* line 367, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box h2 {
+    color: #FFFFFF;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #4caf50;
+    margin-top: 0px;
+    border-bottom: solid 2px #999999;
+  }
+  /* line 378, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box #new_user {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border-bottom: solid 2px #999999;
+  }
+  /* line 384, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box #new_user input[type="email"],
+  #users-registration-main #registration-box #new_user input[type="password"] {
+    font-size: 17px;
+    width: 200px;
+    height: 30px;
+    margin: 5px auto;
+    border: 2px solid #EFEFEF;
+    border-radius: 5px;
+  }
+  /* line 396, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box #new_user input[type="submit"].submit-btn {
+    color: #FFFFFF;
+    font-size: 18px;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 10px auto;
+    background-color: #0091EA;
+    border-radius: 5px;
+  }
+  /* line 405, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box #new_user input[type="submit"].submit-btn:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  /* line 411, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box #new_user .field {
+    margin: 0px auto 10px auto;
+    color: #BBBBBB;
+  }
+  /* line 417, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box .btn-yellow {
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    margin: 3px auto 3px auto;
+    background-color: #FFCA28;
+  }
+  /* line 425, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box .btn-yellow a {
+    color: #FFFFFF;
+  }
+  /* line 427, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box .btn-yellow a:hover {
+    opacity: 0.4;
+  }
+  /* line 434, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box .btn-grey {
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    margin: 3px auto 3px auto;
+    background-color: #BBBBBB;
+  }
+  /* line 442, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box .btn-grey a {
+    color: #FFFFFF;
+  }
+  /* line 444, /Users/t41r/projects/sk-t.ueno-halnagoya/app/assets/stylesheets/normalize.scss */
+  #users-registration-main #registration-box .btn-grey a:hover {
+    opacity: 0.4;
+  }
+}
+/*PC用終了*/
+/*モバイル用*/
