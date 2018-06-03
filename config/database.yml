@@ -47,8 +47,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#heroku用に変更
 production:
   <<: *default
-  database: sk-t_ueno-halnagoya_production
-  username: sk-t_ueno-halnagoya
-  password: <%= ENV['SK-T_UENO-HALNAGOYA_DATABASE_PASSWORD'] %>
+  database: heroku_4ad6dd2450e0ecb
+  username: b12a0a9cc6855e
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
+#aws用
+#production:
+#  <<: *default
+#  database: sk-t_ueno-halnagoya_production
+#  username: sk-t_ueno-halnagoya
+#  password: <%= ENV['SK-T_UENO-HALNAGOYA_DATABASE_PASSWORD'] %>
