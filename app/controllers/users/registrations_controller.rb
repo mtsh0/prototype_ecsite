@@ -26,8 +26,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  def after_update_path_for(resource)
-    users_path
+  def after_sign_up_path_for(resource)
+    first_new_addresses_path
   end
+
+  # def after_update_path_for(resource)
+  #   users_path
+  # end
 
 end

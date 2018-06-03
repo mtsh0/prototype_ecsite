@@ -1,11 +1,9 @@
 class AddressesController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_layout, only: [:new]
-  before_action :set_address, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!
+  before_action :set_address, only: [:edit, :update, :destroy]
 
   def index
     @addresses = Address.includes(:prefecture).where(user_id: current_user.id)
-    set_user_profilelayout
   end
 
   def new
@@ -22,13 +20,11 @@ class AddressesController < ApplicationController
   end
 
   def show
+    binding.pry
     @address = Address.find_by(user_id: current_user.id)
-    set_user_profilelayout
   end
 
-  def edit
-    set_user_profilelayout
-  end
+  def edit; end
 
   def update
     @address.update(address_params)
@@ -44,12 +40,30 @@ class AddressesController < ApplicationController
     redirect_to addresses_path, success: '削除されました'
   end
 
-  private
-    def set_address
-      @address = Address.find(params[:id])
-    end
+  def first_new
+    @address = Address.new
+    render layout: 'no_link'
+  end
 
-    def address_params
-      params.require(:address).permit(:user_id, :user_name, :name_kana, :tel, :postalcode, :prefecture_id, :city, :street, :others)
+  def first_create
+    @address = Address.create(address_params)
+    if @address.save
+      redirect_to root_path, success: '配送先住所の登録が完了しました'
+    else
+      render 'first_new'
+      # layout 'no_link'
+      # render layout: 'no_link' and return
+      # redirect_to first_new_addresses_path
     end
+  end
+
+  private
+
+  def set_address
+    @address = Address.find_by(user_id: current_user.id)
+  end
+
+  def address_params
+    params.require(:address).permit(:user_id, :user_name, :name_kana, :tel, :postalcode, :prefecture_id, :city, :street, :others)
+  end
 end
