@@ -130,3 +130,15 @@ User.create(
     email: '1@gmail.com',
     password: 'lolo1212'
 )
+
+Address.create(
+    user_id: 1,
+    user_name: 1,
+    name_kana: 1,
+    tel: 1,
+    postalcode: 1,
+    prefecture_id: 1,
+    city: 1,
+    street: 1,
+    others: 1
+)
