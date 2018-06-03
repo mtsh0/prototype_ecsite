@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5265269a-daf6-46aa-a939-15ed7e8379f8" name="デフォルト" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/common.css.gz" afterPath="$PROJECT_DIR$/public/assets/common.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/normalize.css.gz" afterPath="$PROJECT_DIR$/public/assets/normalize.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions.css.gz" afterPath="$PROJECT_DIR$/public/assets/sessions.css.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-4c7ca95c5f66bb66dcda278e791775c5.json" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-4c7ca95c5f66bb66dcda278e791775c5.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="$PROJECT_DIR$/public/assets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/common.css" afterPath="$PROJECT_DIR$/public/assets/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/normalize.css" afterPath="$PROJECT_DIR$/public/assets/normalize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/sessions.css" afterPath="$PROJECT_DIR$/public/assets/sessions.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -53,11 +63,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="153">
+              <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1_1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/uploads/item/mainImage/1/1_1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="devise.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="152" lean-forward="false" selection-start-line="11" selection-start-column="152" selection-end-line="11" selection-end-column="152" />
               <folding />
             </state>
           </provider>
@@ -67,7 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>注文履歴</find>
       <find>商品サンプル</find>
       <find>my</find>
       <find>parentImage</find>
@@ -97,6 +123,7 @@
       <find>menu1</find>
       <find>top</find>
       <find>config.assets.compile</find>
+      <find>74_1</find>
     </findStrings>
     <replaceStrings>
       <replace>address</replace>
@@ -112,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/positions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/positions_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/manager/_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/managers/sessions/new.html.erb" />
@@ -163,6 +189,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/user/side_bar/_set_side_bar.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
       </list>
     </option>
   </component>
@@ -240,6 +267,58 @@
               <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
               <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="image2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="image2" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="mainImage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sk-t.ueno-halnagoya" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+              <item name="mainImage" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sk-t.ueno-halnagoya" type="b2602c69:ProjectViewProjectNode" />
@@ -448,12 +527,12 @@
       <workItem from="1527517592162" duration="33514000" />
       <workItem from="1527745520020" duration="24331000" />
       <workItem from="1527994720764" duration="15789000" />
-      <workItem from="1528029822001" duration="21540000" />
+      <workItem from="1528029822001" duration="22234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270517000" />
+    <option name="totallyTimeSpent" value="271211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
@@ -516,20 +595,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/managers/registrations_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/addresses/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="58" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/profile_user.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -912,8 +977,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="153">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/uploads/item/mainImage/1/1_1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="152" lean-forward="false" selection-start-line="11" selection-start-column="152" selection-end-line="11" selection-end-column="152" />
           <folding />
         </state>
       </provider>
