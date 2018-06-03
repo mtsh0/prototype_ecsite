@@ -13,6 +13,9 @@
 #
 
 class Position < ActiveRecord::Base
+  # pagination(kaminari)
+  paginates_per 30
+
   # validation
   validates :title, presence: true
   validates :description, presence: true

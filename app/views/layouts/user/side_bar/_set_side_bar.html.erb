@@ -1,0 +1,5 @@
+<% if @path.is('addresses#first_create', 'orders#new', 'users/sessions#new', 'users/registrations#new') %>
+  <%= render 'layouts/user/side_bar/no_link' %>
+<% else %>
+  <%= render 'layouts/user/side_bar/normal' %>
+<% end %>

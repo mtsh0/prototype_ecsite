@@ -20,7 +20,7 @@ class AddressesController < ApplicationController
   end
 
   def show
-    binding.pry
+    # binding.pry
     @address = Address.find_by(user_id: current_user.id)
   end
 
@@ -50,10 +50,9 @@ class AddressesController < ApplicationController
     if @address.save
       redirect_to root_path, success: '配送先住所の登録が完了しました'
     else
-      render 'first_new'
-      # layout 'no_link'
-      # render layout: 'no_link' and return
       # redirect_to first_new_addresses_path
+      # @address = Address.new(address_params)
+      render 'addresses/first_new'
     end
   end
 

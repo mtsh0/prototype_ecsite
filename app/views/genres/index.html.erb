@@ -1,11 +1,12 @@
 <!--<h1>Genres#index</h1>-->
 <!--<p>Find me in app/views/genres/index.html.erb</p>-->
 <h3>ジャンル一覧</h3>
-<p><button class="btn btn-default btn-xs"><%= link_to 'ジャンルの登録', new_genre_path %></button></p>
+<p class="text-left"><%= page_entries_info @genres %></p>
+<%= paginate @genres %>
 
 <table>
   <tr>
-    <th class="text-center">ジャンルID</th>
+    <th class="text-center">ジャンルNo</th>
     <th class="text-center">ジャンル名</th>
     <th class="text-center">登録日時</th>
     <th class="text-center">修正</th>
@@ -19,3 +20,5 @@
     <td class="text-center"><button class="btn btn-default btn-xs"><%= link_to '変更', edit_genre_path(genre.id)  %></button>　<button class="btn btn-default btn-xs"><%= link_to '削除する', genre_path(genre.id), method: :delete, data: {confirm: "本当に削除しますか?"} %></button></td>
   <% end %>
 </table>
+<%= paginate @genres %>
+<p><button class="btn btn-default btn-xs"><%= link_to '新規ジャンルの登録', new_genre_path %></button></p>

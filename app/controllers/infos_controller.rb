@@ -1,18 +1,21 @@
 class InfosController < ApplicationController
-  before_action :set_info, except: [:new, :create, :index, :show]
+  before_action :set_info, except: [:new, :index, :show]
 
   def index
     @infos = Info.all.page(params[:page]).per(2).reverse_order
+    set_layout
   end
 
   def new
     @info = Info.new
+    set_layout
   end
 
   def create
     @info = Info.new(info_params)
 
     if @info.save
+      binding.pry
       redirect_to infos_path, success: 'お知らせ情報を登録しました'
     else
       render 'new'
@@ -27,6 +30,7 @@ class InfosController < ApplicationController
     else
       render 'edit'
     end
+    set_layout
   end
 
   def destroy
@@ -35,6 +39,7 @@ class InfosController < ApplicationController
     else
       redirect_to infos_path, danger: 'エラーにより削除できませんでした'
     end
+    set_layout
   end
 
   private

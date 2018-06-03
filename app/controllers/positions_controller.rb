@@ -1,29 +1,21 @@
 class PositionsController < ApplicationController
   before_action :set_position, only: [:show, :edit, :update, :destroy]
 
-  # GET /positions
-  # GET /positions.json
   def index
-    @positions = Position.all
+    @positions = Position.all.page(params[:page])
+    set_layout
   end
 
-  # GET /positions/1
-  # GET /positions/1.json
   def show
+    set_layout
   end
 
-  # GET /positions/new
   def new
     @position = Position.new
+    set_layout
   end
 
-  # GET /positions/1/edit
-  def edit
-  end
-
-  # POST /positions
-  # POST /positions.json
-  def create
+   def create
     @position = Position.new(position_params)
 
     respond_to do |format|
@@ -35,10 +27,13 @@ class PositionsController < ApplicationController
         format.json { render json: @position.errors, status: :unprocessable_entity }
       end
     end
+    set_layout
   end
 
-  # PATCH/PUT /positions/1
-  # PATCH/PUT /positions/1.json
+  def edit
+    set_layout
+  end
+
   def update
     respond_to do |format|
       if @position.update(position_params)
@@ -49,10 +44,9 @@ class PositionsController < ApplicationController
         format.json { render json: @position.errors, status: :unprocessable_entity }
       end
     end
+    set_layout
   end
 
-  # DELETE /positions/1
-  # DELETE /positions/1.json
   def destroy
     @position.destroy
     respond_to do |format|

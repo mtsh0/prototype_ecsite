@@ -28,6 +28,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # pagination(kaminari)
+  paginates_per 20
+
   # relation
   # has_one :cart, dependent: :destroy
   has_many :addresses

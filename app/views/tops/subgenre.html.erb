@@ -1,0 +1,33 @@
+<h1>Tops#subgenre</h1>
+<p>Find me in app/views/tops/subgenre.html.erb</p>
+
+<% unless @items.blank? %>
+  <p><%= @subgenre.name %> の商品(<%= page_entries_info @items %>)</p>
+  <p><%= paginate @items %></p>
+  <div class="clearfix">
+    <% @items.each do | item | %>
+            <div class="item-card">
+              <%= link_to(preview_item_path(item.id)) do  %>
+                <div class="image">
+                  <%= image_tag item.mainImage.url %>
+                </div>
+                <div class="name">
+                  <%= item.itemName %>
+                </div>
+                <div class="price">
+                  <% price = (item.price).to_s %>
+                  <% if price.end_with?(".0") %><!--整数なら-->
+                      <% item.price = (item.price).to_i %>
+                      <%= number_to_currency(item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+                  <% else %>
+                      <%= number_to_currency(item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+    <% end %>
+  </div>
+<p><%= paginate @items %></p>
+<% else %>
+  <p>商品がありません</p>
+<% end %>

@@ -1,11 +1,12 @@
-<h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<h1>Tops#genre</h1>
+<p>Find me in app/views/tops/genre.html.erb</p>
 
-  <div class="box">
-    <h2>新商品<div class="show-more">もっとみる</div></h2>
-
-    <% @newItems.each do | item | %>
-        <%= link_to(preview_item_path(item.id)) do  %>
+<% unless @items.blank? %>
+<p><%= @genre.name %> の商品(<%= page_entries_info @items %>)</p>
+<p><%= paginate @items %></p>
+<div class="clearfix">
+  <% @items.each do | item | %>
+      <%= link_to(preview_item_path(item.id)) do  %>
           <div class="item-card">
             <div class="image">
               <%= image_tag item.mainImage.url %>
@@ -23,16 +24,10 @@
               <% end %>
             </div>
           </div>
-        <% end %>
-    <% end %>
-  </div>
-
-
-<br>
-<br>
-<%= link_to 'お知らせ新規', infos_path %>
-<br>
-<br>
-<%= link_to '商品一覧', items_path %>
-<br>
-<br>
+      <% end %>
+  <% end %>
+</div>
+  <p><%= paginate @items %></p>
+<% else %>
+  <p>商品がありません</p>
+<% end %>

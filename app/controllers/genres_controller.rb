@@ -1,11 +1,13 @@
 class GenresController < ApplicationController
   before_action :set_genre, only: [:edit, :update, :destroy]
   def index
-    @genres = Genre.all
+    @genres = Genre.all.page(params[:page])
+    set_layout
   end
 
   def new
     @genre = Genre.new
+    set_layout
   end
 
   def create
@@ -16,9 +18,12 @@ class GenresController < ApplicationController
     else
       render 'new'
     end
+    set_layout
   end
 
-  def edit; end
+  def edit
+    set_layout
+  end
 
   def update
     if @genre.update(genre_params)
@@ -26,6 +31,7 @@ class GenresController < ApplicationController
     else
       render 'edit'
     end
+    set_layout
   end
 
   def destroy
@@ -33,87 +39,8 @@ class GenresController < ApplicationController
     redirect_to genres_path, success: "#{@genre.name} が削除されました"
   end
 
-  def genre1
-    @items = Item.where(genre_id: 1)
-  end
-
-  def genre1_1
-
-  end
-
-  def genre1_2
-
-  end
-
-  def genre1_3
-
-  end
-
-  def genre1_4
-
-  end
-
-  def genre2
-    @items = Item.where(genre_id: 2)
-  end
-
-  def genre2_1
-
-  end
-
-  def genre2_2
-
-  end
-
-  def genre2_3
-
-  end
-
-  def genre2_4
-
-  end
-
-  def genre3
-    @items = Item.where(genre_id: 3)
-  end
-
-  def genre3_1
-
-  end
-
-  def genre3_2
-
-  end
-
-  def genre3_3
-
-  end
-
-  def genre3_4
-
-  end
-
-  def genre4
-    @items = Item.where(genre_id: 4)
-  end
-
-  def genre4_1
-
-  end
-
-  def genre4_2
-
-  end
-
-  def genre4_3
-
-  end
-
-  def genre4_4
-
-  end
-
   private
+
   def genre_params
     params.require(:genre).permit(:name)
   end

@@ -1,5 +1,5 @@
-<h1>Top#company</h1>
-<p>Find me in app/views/top/company.html.erb</p>
+<h1>Tops#company</h1>
+<p>Find me in app/views/tops/company.html.erb</p>
 
 <h3>プロフィール</h3>
 
@@ -43,20 +43,20 @@
     <td>
       <ul>
         <li>Git</li>
+        <li>Slim</li>
         <li>RSpec</li>
-        <li>JavaScript(ReactもしくはVueを含む)</li>
-        <li>AWS</li>
+        <li>JavaScript(余裕があればReactもしくはVueも)</li>
+        <!--<li>AWS</li>-->
       </ul>
     </td>
   </tr>
 </table>
 <div id="map" style="width: 670px; height: 400px;"></div>
 <script type="text/javascript">
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-     markers = handler.addMarkers(<%=raw @hash.to_json %>);
-     handler.bounds.extendWith(markers);
-     handler.fitMapToBounds();
-  });
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+    });
 </script>
-

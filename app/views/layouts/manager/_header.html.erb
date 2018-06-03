@@ -1,0 +1,19 @@
+<header>
+  <!--ロゴ-->
+  <div id="logo">
+    <%= link_to dashboard_managers_path do %>
+      <%= image_tag('logo.png', :size => "270x65") %>
+    <% end %>
+    (管理者画面)
+  </div>
+  <!--ログイン-->
+  <% if manager_signed_in? %>
+      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+      <!-- *_path はUserモデルを作成したときに、
+      deviseにより自動で作成されてますので、rake routesで確認できます -->
+      <div id="right">
+          <%= current_manager.email %>さん
+      </div>
+  <% end %>
+  <!--ログイン-->
+</header>

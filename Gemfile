@@ -20,6 +20,7 @@ gem 'devise-i18n-views'
 gem 'gmaps4rails'
 gem 'kaminari'
 gem 'mini_magick'
+gem 'non-stupid-digest-assets'
 gem 'payjp'
 gem 'squasher'
 
@@ -46,7 +47,6 @@ gem 'squasher'
 group :development, :test do
 
   gem 'annotate'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry-rails'

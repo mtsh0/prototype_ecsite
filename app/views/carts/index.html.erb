@@ -1,5 +1,6 @@
-<h1>Carts#index</h1>
-<p>Find me in app/views/carts/index.html.erb</p>
+<!--<h1>Carts#index</h1>-->
+<!--<p>Find me in app/views/carts/index.html.erb</p>-->
+<p>カート一覧</p>
 <% unless @cartitems.blank? %>
   <table>
       <tr>
@@ -67,7 +68,9 @@
 <%= link_to 'レジへ進む', new_order_path %>
 <br>
 <br>
-<br>
+
 <% else %>
 <p>カートにはまだ商品がありません</p>
 <% end %>
+
+<%= link_to '戻る', :back %>

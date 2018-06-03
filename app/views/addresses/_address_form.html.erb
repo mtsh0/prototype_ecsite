@@ -1,5 +1,16 @@
 <!--<p>Find me in app/views/addresses/_address_form.html.erb</p>-->
 <%= form_for(@address) do |f|%>
+    <% if @address.errors.any? %>
+        <!-- 問題がある場合 -->
+        <!-- エラー内容の表示 -->
+        <div class="alert alert-danger">
+          <ul>
+            <% @address.errors.full_messages.each do |msg| %>
+                <li><%= msg.html_safe %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <!-- 配送先氏名 -->
     <div class="field">
       <span>※</span><%= f.label :user_name, class: 'control-label' %><br>

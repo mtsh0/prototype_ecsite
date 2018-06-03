@@ -7,7 +7,10 @@
 #
 
 class Genre < ActiveRecord::Base
-  #validation
+  # pagination
+  paginates_per 30
+
+  # validation
   validates :name, presence: true
 
   # relation

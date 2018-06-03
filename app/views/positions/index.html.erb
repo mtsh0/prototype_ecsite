@@ -1,7 +1,7 @@
 <!--<p>Find me in app/views/positions/index.html.erb</p>-->
 <h3>位置情報一覧</h3>
-
-<p><button class="btn btn-default btn-xs"><%= link_to '位置情報の登録', new_position_path %></button></p>
+<p class="text-left"><%= page_entries_info @positions %></p>
+<%= paginate @positions %>
 <table>
   <thead>
     <tr>
@@ -27,7 +27,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-
+<%= paginate @positions %>
+<p><button class="btn btn-default btn-xs"><%= link_to '位置情報の登録', new_position_path %></button></p>

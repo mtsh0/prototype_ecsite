@@ -9,10 +9,10 @@
       <%= image_tag @item.mainImage.url, :class => "parentImage" %><!--メインイメージ-->
       <%= image_tag @item.mainImage.url, :class => "childImage" %><!--サブイメージ1-->
       <% if @item.image2? %>
-          <%= image_tag @item.mainImage.url, :class => "childImage" %><!--サブイメージ2-->
+          <%= image_tag @item.image2.url, :class => "childImage" %><!--サブイメージ2-->
       <% end %>
       <% if @item.image3? %>
-          <%= image_tag @item.mainImage.url, :class => "childImage" %><!--サブイメージ3-->
+          <%= image_tag @item.image3.url, :class => "childImage" %><!--サブイメージ3-->
       <% end %>
   </div>
 </div>
@@ -43,11 +43,15 @@
     <%= form_tag(add_item_carts_path, method: :post) do %>
       <%= hidden_field_tag :item_id, @item.id %>
       <%= hidden_field_tag :user_id, current_user.id %>
-      <%= select_tag :quantity, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]) %>
-      <%= submit_tag 'カートに入れる', data: { disable_with: 'カートに追加しています' } %>
+      <div class="text-center">
+        <%= select_tag :quantity, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]) %>
+        <%= submit_tag 'カートに入れる', data: { disable_with: 'カートに追加しています' } %>
+      </div>
     <% end %>
   <% else %>
-    <%= link_to 'ログインする', new_user_session_path %>
+    <div class="text-center">
+      <button class="btn btn-primary btn-xs"><%= link_to 'ログインする', new_user_session_path %></button>
+    </div>
   <% end %>
 
 </div>

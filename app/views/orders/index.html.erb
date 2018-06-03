@@ -2,6 +2,9 @@
 <!--<p>Find me in app/views/orders/index.html.erb</p>-->
 
 <h3>注文一覧</h3>
+<p class="text-left"><%= page_entries_info @orders %></p>
+<%= paginate @orders %>
+
 <table>
   <tr>
     <th class="text-center">注文番号</th>
@@ -51,3 +54,5 @@
     </tr>
   <% end %>
 </table>
+
+<%= paginate @orders %>

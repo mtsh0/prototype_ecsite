@@ -3,7 +3,6 @@
     <!-- 問題がある場合 -->
       <!-- エラー内容の表示 -->
       <div class="alert alert-danger">
-        <h3><%= @item.errors.count %>件のエラーがあります</h3>
         <ul>
         <% @item.errors.full_messages.each do |msg| %>
           <li><%= msg.html_safe %></li>

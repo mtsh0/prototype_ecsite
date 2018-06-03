@@ -1,7 +1,16 @@
 <!--<p>Find me in app/views/orders/_orders_form.html.erb</p>-->
-<h1>配送状況の登録</h1>
-
 <%= form_for(@order) do |f| %>
+    <% if @order.errors.any? %>
+        <!-- 問題がある場合 -->
+        <!-- エラー内容の表示 -->
+        <div class="alert alert-danger">
+          <ul>
+            <% @order.errors.full_messages.each do |msg| %>
+                <li><%= msg.html_safe %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
   <!--配送業者-->
   <label>配送業者</label><br>
   <p><%= f.collection_select(:dvendor_id, Dvendor.all, :id, :name) %></p>

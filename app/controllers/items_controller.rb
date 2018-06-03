@@ -2,28 +2,33 @@ class ItemsController < ApplicationController
 
   before_action :set_item, except: [:new, :create, :index]
 
+  def index
+    @items = Item.all.page(params[:page])
+    set_layout
+  end
+
   def new
     @item = Item.new
+    set_layout
   end
 
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to item_path(@item), success: "登録が完了しました"
+      redirect_to new_item_path, success: "#{@item.itemName}登録が完了しました"
     else
       render 'new'
     end
-
-
+    set_layout
   end
 
-  def index
-    @items = Item.all.page(params[:page])
+  def show;
+    set_layout
   end
 
-  def show; end
-
-  def edit;end
+  def edit;
+    set_layout
+  end
 
   def update
     if @item.update(item_params)
@@ -31,6 +36,7 @@ class ItemsController < ApplicationController
     else
       render 'edit'
     end
+    set_layout
   end
 
   def destroy

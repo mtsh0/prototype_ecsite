@@ -2,8 +2,8 @@
 <!--<h1>Items#index</h1>-->
 <!--<p>Find me in app/views/items/index.html.erb</p>-->
 <h3>商品一覧</h3>
-<br>
-<p><button class="btn btn-xs btn-default"><%= link_to '商品を登録する', new_item_path %></button></p>
+<div class="text-left"><%= page_entries_info @items %></div>
+<%= paginate @items %>
 
 <% unless @items.blank? %>
   <table>
@@ -42,6 +42,7 @@
 <br>
 <br>
 <%= paginate @items %>
+<p><button class="btn btn-xs btn-default"><%= link_to '新規商品を登録する', new_item_path %></button></p>
 
 <br>
 

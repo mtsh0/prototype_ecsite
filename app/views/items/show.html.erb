@@ -22,7 +22,11 @@
     </tr>
     <tr>
       <th>注意事項</th>
-      <td colspan="3"><%= @item.attention %></td>
+        <% if @item.attention.blank? %>
+          <td colspan="3">登録なし</td>
+        <% else %>
+          <td colspan="3"><%= @item.attention %></td>
+        <% end %>
     </tr>
     <tr>
       <th>価格</th>
@@ -62,4 +66,4 @@
     </tr>
 </table>
 <br>
-<p><button class="btn btn-default btn-xs"><%= link_to '編集する', edit_item_path %></button>　<button class="btn btn-default btn-xs"><%= link_to '削除する', item_path(@item.id), method: :delete, data: {confirm: "本当に削除しますか?"} %></button>　<button class="btn btn-default btn-xs"><%= link_to '商品一覧へ', items_path %></button>　<button class="btn btn-default btn-xs"><%= link_to '商品を登録する', new_item_path %></button></p>
+<p><button class="btn btn-default btn-xs"><%= link_to '編集する', edit_item_path %></button>　<button class="btn btn-default btn-xs"><%= link_to '削除する', item_path(@item.id), method: :delete, data: {confirm: "本当に削除しますか?"} %></button>　<button class="btn btn-default btn-xs"><%= link_to '商品一覧へ', items_path %></button></p>

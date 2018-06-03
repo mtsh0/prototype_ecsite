@@ -1,13 +1,12 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 //PC用
 @media screen and (min-width: 765px) {
 
-  .top{
+  .tops{
 
-    main.index{
+    main.index {
 
       .box{
         position: relative;
@@ -52,23 +51,44 @@
               height: 145px;
             }
           }
-          div.title {
-            text-align: center;
-          }
-          div.name {
-            text-align: center;
-          }
           div.price {
-            text-align: center;
             color: #FF4500;
           }
         }//.item-card
-
       }//.box
+    }//main.index
 
+    main.genre, main.subgenre {
+      div.item-card {
+        float: left;
+        width: 149px;
+        height: 190px;
+        border: solid 2px lightgrey;
+        margin: 20px 5px 0 5px;
 
+        div.image {
+          width: 145px;
+          height: 145px;
+          border-bottom: solid 2px lightgrey;
 
-    }
+          img{
+            width: 145px;
+            height: 145px;
+          }//img
+        }//div.image
+
+        div.title {
+          text-align: center;
+        }
+        div.name {
+          text-align: center;
+        }
+        div.price {
+          text-align: center;
+          color: #FF4500;
+        }
+      }//.item-card
+    }//main.subgenre
 
     .company{
       h1{
@@ -79,10 +99,10 @@
         margin: 0 auto;
         border: none;
 
-          .midashi{
-            width: 200px;
-            text-align: center;
-          }
+        .midashi{
+          width: 200px;
+          text-align: center;
+        }
 
         td{
           padding-left: 20px;

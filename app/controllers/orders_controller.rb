@@ -1,9 +1,11 @@
 class OrdersController < ApplicationController
   before_action :set_cartitems, only: [:new, :create, :pay]
+
   protect_from_forgery except: :pay
 
   def index
-    @orders = Order.all.reverse_order
+    @orders = Order.all.page(params[:page]).reverse_order
+    set_layout
   end
 
   def show
@@ -16,7 +18,8 @@ class OrdersController < ApplicationController
       @total_count += cartitem.quantity
       @total_price += cartitem.quantity * cartitem.item.price
     end
-    # binding.pry
+
+    set_layout
   end
 
   def new; end
@@ -26,18 +29,16 @@ class OrdersController < ApplicationController
   def edit
     @order = Order.find(params[:id])
     @submit = '登録する'
+    set_layout
   end
 
   def update
-    # binding.pry
     @order = Order.find(params[:id])
-    binding.pry
-    # @order.update(trackable_params)
 
-    if @order.update(trackable_params)
+    if @order.update(update_trackable_params)
       redirect_to order_path(@order), success: "#{@order.order_no}の配送状況が登録されました"
     else
-
+      render 'edit'
     end
   end
 
@@ -57,7 +58,7 @@ class OrdersController < ApplicationController
     )
 
     # クレジット決済による売上登録(payjp)
-    charge = Payjp::Charge.create(
+    Payjp::Charge.create(
         :amount => @total_price,
         :card => token.id,
         :currency => 'jpy'
@@ -73,11 +74,13 @@ class OrdersController < ApplicationController
 
     # 最後の注文の注文番号取得
     @last_order = Order.select("order_no").last
-    order_no = @last_order.order_no
-    # binding.pry
+
+    unless @last_order.blank?
+      order_no = @last_order.order_no
+    end
 
     # 注文日を確認して番号の割り振り
-    if((order_no == nil) || (order_no.start_with?(current_day) == false))
+    if((@last_order == nil) || (order_no.start_with?(current_day) == false))
       # 当日の注文がまだない場合
       @order.order_no = ("#{current_day}" + "001")
     else
@@ -86,9 +89,10 @@ class OrdersController < ApplicationController
     end
 
     @order.user_id = current_user.id
-    @order.total_price = @total_price
+    @order.total_price = @total_price.to_s
     @address = Address.find_by(user_id: current_user.id)
     @order.address_id = @address.id
+
 
     if @order.save
       # 注文完了、カートの商品を注文レコードに紐付ける
@@ -98,12 +102,15 @@ class OrdersController < ApplicationController
         cartitem.save
       end
       redirect_to order_path(@order), success: '注文が完了しました。お買い上げいただきありがとうございました'
+    else
+      flash.now[:danger] = 'エラー1'
+      render 'new'
     end
 
   # payjpのカード情報登録エラー時の処理
   rescue Payjp::CardError
-    flash.now[:danger] = 'カードエラーが発生しました。もう一度ご確認ください'
-    render 'new'
+    flash.now[:danger] = 'カード情報が確認できませんでした。もう一度確認の上入力してください'
+    render 'orders/new'
   end
 
   private
@@ -115,8 +122,8 @@ class OrdersController < ApplicationController
     @total_count = 0
     @total_price = 0
     @cartitems.each do |cartitem|
-      @total_count += cartitem.quantity
-      @total_price += ((cartitem.item.price) * (cartitem.quantity)).to_i
+      @total_count += cartitem.quantity.to_i
+      @total_price += ((cartitem.item.price).to_i * (cartitem.quantity)).to_i
     end
   end
 
@@ -124,8 +131,7 @@ class OrdersController < ApplicationController
     params.permit(:order_no, :user_id, :total_price, :address_id, :dvendor_id, :d_number)
   end
 
-  def trackable_params
+  def update_trackable_params
     params.require(:order).permit(:order_no, :user_id, :total_price, :address_id, :dvendor_id, :d_number)
-
   end
 end

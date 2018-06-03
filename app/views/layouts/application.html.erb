@@ -14,16 +14,16 @@
 </head>
 <body class='<%= "#{controller.controller_name}" %>'>
 
-<%= render "layouts/user/header" %><!--header-->
-<%= render "layouts/user/nav" %><!--グローバルナビゲーション+おしらせ-->
+<%= render 'layouts/user/header' %><!--header-->
+<%= render 'layouts/user/nav' %><!--グローバルナビゲーション+おしらせ-->
 <div class="container">
-  <%= render "layouts/user/sidebar" %><!--サイドバー-->
+  <%= render 'layouts/user/side_bar/set_side_bar' %><!--サイドバー-->
   <!-- main -->
     <main class='<%= "#{controller.action_name}" %>'>
     <!--フラッシュメッセージ-->
       <% flash.each do |name, msg| %>
-        <% name = "success" if name == "notice" %>
-        <% name = "danger" if name == "alert" %>
+        <% name = 'success' if name == 'notice' %>
+        <% name = 'danger' if name == 'alert' %>
         <div class="alert alert-<%= name %>">
           <%= msg.html_safe %>
         </div>
@@ -33,6 +33,30 @@
       <%= yield %>
     </main>
 </div><!--#container-->
-<%= render "layouts/user/footer" %><!--フッター部分-->
+<%= render 'layouts/user/footer' %><!--フッター部分-->
+<script>
+    (function($) {
+        'use strict';
+        // Collapseイベント
+        $('#menu1, #menu2, #menu3, #menu4, #menu5').on({
+            // 折り畳み開く処理
+            'show.bs.collapse': function() {
+                $('a[href="#' + this.id + '"] span.glyphicon-chevron-down')
+                    .removeClass('glyphicon-chevron-down')
+                    .addClass('glyphicon-chevron-up');
+            },
+            // 折り畳み閉じる処理
+            'hide.bs.collapse': function() {
+                $('a[href="#' + this.id + '"] span.glyphicon-chevron-up')
+                    .removeClass('glyphicon-chevron-up')
+                    .addClass('glyphicon-chevron-down');
+            }
+        });
+        // ハッシュリンクキャンセル
+        $('a[href="#menu1"], a[href="#menu2"], a[href="#menu3"], a[href="#menu4"], a[href="#menu5"]').on('click', function(event) {
+            event.preventDefault();
+        });
+    })(jQuery);
+</script>
 </body>
 </html>

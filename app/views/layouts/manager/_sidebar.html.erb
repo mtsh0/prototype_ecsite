@@ -1,0 +1,15 @@
+<div id="side-bar">
+  <div class="panel panel-success">
+    <div class="panel-heading">項目</div>
+    <ul class="list-group">
+      <li class="list-group-item"><%= link_to '注文一覧', orders_path %></li>
+      <li class="list-group-item"><%= link_to 'お知らせ情報', infos_path %></li>
+      <li class="list-group-item"><%= link_to '商品一覧', items_path %></li>
+      <li class="list-group-item"><%= link_to 'ジャンル情報', genres_path %></li>
+      <!--<li class="list-group-item"><%# link_to 'サブジャンル情報', infos_path %></li>-->
+      <li class="list-group-item"><%= link_to 'GoogleMap用', positions_path %></li>
+
+      <li class="list-group-item"><%= link_to 'ログアウト', destroy_manager_session_path %></li>
+    </ul>
+  </div>
+</div>

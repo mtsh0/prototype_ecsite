@@ -7,19 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Position(googlemap位置情報)テーブルのデータ
-Position.create(title: "東京", description: "就職希望エリア", address: "東京", latitude: 35.681241, longitude: 139.767041)
-Position.create(title: "HAL名古屋", description: "勉強場所", address: "名古屋市中村区 名駅4丁目27−1", latitude: 35.168266, longitude: 136.885762)
-Position.create(title: "岐阜市", description: "出身地", address: "岐阜県岐阜市", latitude: 35.409570, longitude: 136.757041)
-Position.create(title: "名古屋市", description: "現住所", address: "愛知県中村区名駅南", latitude: 35.171152, longitude: 136.881558)
+Position.create(title: '東京', description: '就職希望エリア', address: '東京', latitude: 35.681241, longitude: 139.767041)
+Position.create(title: 'HAL名古屋', description: '勉強場所', address: '名古屋市中村区 名駅4丁目27−1', latitude: 35.168266, longitude: 136.885762)
+Position.create(title: '岐阜市', description: '出身地', address: '岐阜県岐阜市', latitude: 35.409570, longitude: 136.757041)
+Position.create(title: '名古屋市', description: '現住所', address: '愛知県中村区名駅南', latitude: 35.171152, longitude: 136.881558)
 
 
 # 配達業者テーブルのデータ
-Dvendor.create(name: "ヤマト", for_api_name: "yamato", created_at: nil, updated_at: nil)
-Dvendor.create(name: "西濃運輸", for_api_name: "seino", created_at: nil, updated_at: nil)
-Dvendor.create(name: "佐川急便", for_api_name: "sagawa", created_at: nil, updated_at: nil)
-Dvendor.create(name: "ゆうパック", for_api_name: "jppost_pack", created_at: nil, updated_at: nil)
-Dvendor.create(name: "郵便書留", for_api_name: "jppost_mail", created_at: nil, updated_at: nil)
-Dvendor.create(name: "福山通運", for_api_name: "fukutsu", created_at: nil, updated_at: nil)
+Dvendor.create(name: 'ヤマト', for_api_name: 'yamato', created_at: nil, updated_at: nil)
+Dvendor.create(name: '西濃運輸', for_api_name: 'seino', created_at: nil, updated_at: nil)
+Dvendor.create(name: '佐川急便', for_api_name: 'sagawa', created_at: nil, updated_at: nil)
+Dvendor.create(name: 'ゆうパック', for_api_name: 'jppost_pack', created_at: nil, updated_at: nil)
+Dvendor.create(name: '郵便書留', for_api_name: 'jppost_mail', created_at: nil, updated_at: nil)
+Dvendor.create(name: '福山通運', for_api_name: 'fukutsu', created_at: nil, updated_at: nil)
 
 
 
@@ -29,10 +29,11 @@ Dvendor.create(name: "福山通運", for_api_name: "fukutsu", created_at: nil, u
         itemCodeNo: num+1,
         partNumber: "ITEM-#{num+1}",
         itemName:"商品-#{num+1}",
-        genre_id: rand(1..5),
+        genre_id: rand(1..3),
+        # subgenre_id: rand(((genre_id * 5) - 4)..(genre_id * 5)),#rand(1..15),
         subgenre_id: rand(1..5),
         price: rand(1..100000),
-        description: "商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。商品-#{num}のせつめいです。",
+        description: "商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。",
         attention: nil,
         mainImage: File.open("#{Rails.root}/db/fixtures/#{num+1}_1.jpg"),
         image2: File.open("#{Rails.root}/db/fixtures/#{num+1}_2.jpg"),
@@ -47,28 +48,26 @@ end
 
 
 # ジャンルテーブルのデータ
-Genre.create(name: "ジャンル1")
-Genre.create(name: "ジャンル2")
-Genre.create(name: "ジャンル3")
-Genre.create(name: "ジャンル4")
-Genre.create(name: "ジャンル5")
+3.times.each do |num|
+  Genre.create(name: "ジャンル#{num + 1}")
+end
 
 # サブジャンルテーブルのデータ
-Subgenre.create(name: "サブジャンル1", genre_id: 1)
-Subgenre.create(name: "サブジャンル2", genre_id: 1)
-Subgenre.create(name: "サブジャンル3", genre_id: 1)
-Subgenre.create(name: "サブジャンル4", genre_id: 2)
-Subgenre.create(name: "サブジャンル5", genre_id: 2)
-Subgenre.create(name: "サブジャンル6", genre_id: 2)
-Subgenre.create(name: "サブジャンル7", genre_id: 3)
-Subgenre.create(name: "サブジャンル8", genre_id: 3)
-Subgenre.create(name: "サブジャンル9", genre_id: 3)
-Subgenre.create(name: "サブジャンル10", genre_id: 4)
-Subgenre.create(name: "サブジャンル11", genre_id: 4)
-Subgenre.create(name: "サブジャンル12", genre_id: 4)
-Subgenre.create(name: "サブジャンル13", genre_id: 5)
-Subgenre.create(name: "サブジャンル14", genre_id: 5)
-Subgenre.create(name: "サブジャンル15", genre_id: 5)
+Subgenre.create(name: 'サブジャンル1', genre_id: 1)
+Subgenre.create(name: 'サブジャンル2', genre_id: 1)
+Subgenre.create(name: 'サブジャンル3', genre_id: 1)
+Subgenre.create(name: 'サブジャンル4', genre_id: 1)
+Subgenre.create(name: 'サブジャンル5', genre_id: 1)
+Subgenre.create(name: 'サブジャンル6', genre_id: 2)
+Subgenre.create(name: 'サブジャンル7', genre_id: 2)
+Subgenre.create(name: 'サブジャンル8', genre_id: 2)
+Subgenre.create(name: 'サブジャンル9', genre_id: 2)
+Subgenre.create(name: 'サブジャンル10', genre_id: 2)
+Subgenre.create(name: 'サブジャンル11', genre_id: 3)
+Subgenre.create(name: 'サブジャンル12', genre_id: 3)
+Subgenre.create(name: 'サブジャンル13', genre_id: 3)
+Subgenre.create(name: 'サブジャンル14', genre_id: 3)
+Subgenre.create(name: 'サブジャンル15', genre_id: 3)
 
 # 都道府県テーブルのデータ
 Prefecture.create(name: "北海道")

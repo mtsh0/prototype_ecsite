@@ -11,10 +11,9 @@
 </head>
 <body class='<%= "#{controller.controller_name}" %>'>
 
-<%= render "layouts/user/firstvisit/header" %><!--header-->
-<%= render "layouts/user/nav" %><!--グローバルナビゲーション+おしらせ-->
+<%= render "layouts/manager/header" %><!--header-->
 <div class="container">
-  <%= render "layouts/user/sidebar" %><!--サイドバー-->
+  <%= render "layouts/manager/sidebar" %><!--サイドバー-->
   <!-- main -->
   <main class='<%= "#{controller.action_name}" %>'>
     <!--フラッシュメッセージ-->
@@ -30,6 +29,6 @@
     <%= yield %>
   </main>
 </div><!--#container-->
-<%= render "layouts/user/footer" %><!--フッター部分-->
+<%= render "layouts/manager/footer" %><!--フッター部分-->
 </body>
 </html>

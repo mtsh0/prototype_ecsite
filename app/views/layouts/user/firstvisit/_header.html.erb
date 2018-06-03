@@ -6,11 +6,6 @@
       <div id="right">
         <% if user_signed_in? %>
             <%= current_user.email %>さん
-        <% elsif manager_signed_in? %>
-            <%# current_manager.email %>さん
-        <% else %>
-            <div>げすとさん</div>
         <% end %>
-        <!--基本情報などのメニュー表示-->
       </div>
 </header>

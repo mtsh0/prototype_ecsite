@@ -12,3 +12,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile << 'normalize.scss'
 Rails.application.config.assets.precompile << 'common.scss'
 Rails.application.config.assets.precompile << 'sessions.scss'
+
+# bootstrap用
+# Rails.application.config.assets.precompile += %w( *.svg *.eot *.woff *.ttf *.woff2 )

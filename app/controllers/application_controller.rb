@@ -3,17 +3,20 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
+  before_action :set_infos
+  before_action :request_path
   # bootstrapフラッシュメッセージ用
   add_flash_types :success, :info, :warning, :danger
 
-
-  before_action :set_infos
-
-
-
   def set_infos
     @osirase = Info.order(created_at: :desc).limit(3)
+  end
+
+  def request_path
+    @path = controller_path + '#' + action_name
+    def @path.is(*str)
+      str.map{|s| self.include?(s)}.include?(true)
+    end
   end
 
   def set_layout
