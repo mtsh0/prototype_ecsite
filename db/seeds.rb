@@ -24,24 +24,25 @@ Dvendor.create(name: '福山通運', for_api_name: 'fukutsu', created_at: nil, u
 
 
 # 商品テーブルのデータ
-75.times.each do |num|
+75.times do |num|
+  genre_id = rand(1..3)
+  subgenre_id_range = (genre_id * 5 - 4)..(genre_id * 5)
   item = Item.create(
-        itemCodeNo: num+1,
-        partNumber: "ITEM-#{num+1}",
-        itemName:"商品-#{num+1}",
-        genre_id: rand(1..3),
-        # subgenre_id: rand(((genre_id * 5) - 4)..(genre_id * 5)),#rand(1..15),
-        subgenre_id: rand(1..5),
-        price: rand(1..100000),
-        description: "商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。",
-        attention: nil,
-        mainImage: File.open("#{Rails.root}/db/fixtures/#{num+1}_1.jpg"),
-        image2: File.open("#{Rails.root}/db/fixtures/#{num+1}_2.jpg"),
-        image3: File.open("#{Rails.root}/db/fixtures/#{num+1}_3.jpg"),
-        created_at: (Time.local(2018, 4, 1, 0, 0, 0) + (num * 60)),
-        updated_at: nil
+      itemCodeNo: num+1,
+      partNumber: "ITEM-#{num+1}",
+      itemName:"商品-#{num+1}",
+      genre_id: genre_id,
+      subgenre_id: rand(subgenre_id_range),
+      price: rand(1..100000),
+      description: "商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。商品-#{num+1}のせつめいです。",
+      attention: nil,
+      mainImage: File.open("#{Rails.root}/db/fixtures/#{num+1}_1.jpg"),
+      image2: File.open("#{Rails.root}/db/fixtures/#{num+1}_2.jpg"),
+      image3: File.open("#{Rails.root}/db/fixtures/#{num+1}_3.jpg"),
+      created_at: (Time.local(2018, 4, 1, 0, 0, 0) + (num * 60)),
+      updated_at: nil
 
-    )
+  )
   # binding.pry
   item.save!
 end
@@ -50,7 +51,7 @@ end
 
 
 # ジャンルテーブルのデータ
-3.times.each do |num|
+3.times do |num|
   Genre.create(name: "ジャンル#{num + 1}")
 end
 
@@ -122,7 +123,7 @@ Prefecture.create(name: "沖縄県")
 
 
 Manager.create(
-  email: '999@gmail.com',
+    email: '999@gmail.com',
     password: 'lolo1212'
 )
 
@@ -136,7 +137,7 @@ Address.create(
     user_name: 1,
     name_kana: 1,
     tel: 1,
-    postalcode: 1,
+    postalcode: 1111111,
     prefecture_id: 1,
     city: 1,
     street: 1,

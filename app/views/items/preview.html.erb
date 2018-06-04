@@ -6,13 +6,13 @@
 <h1><%= @item.itemName %> <span>(品番：<%= @item.partNumber %>)</span></h1>
 <div class="float-left">
   <div class="image">
-      <%= image_tag @item.mainImage.url, :class => "parentImage" %><!--メインイメージ-->
-      <%= image_tag @item.mainImage.url, :class => "childImage" %><!--サブイメージ1-->
+      <%= image_tag @item.mainImage.url, class: 'parentImage', id: 'mainimage' %><!--メインイメージ-->
+      <%= image_tag @item.mainImage.url, class: 'childImage', id: 'subimage1' %><!--サブイメージ1-->
       <% if @item.image2? %>
-          <%= image_tag @item.image2.url, :class => "childImage" %><!--サブイメージ2-->
+          <%= image_tag @item.image2.url, class: 'childImage', id: 'subimage2' %><!--サブイメージ2-->
       <% end %>
       <% if @item.image3? %>
-          <%= image_tag @item.image3.url, :class => "childImage" %><!--サブイメージ3-->
+          <%= image_tag @item.image3.url, class: 'childImage', id: 'subimage3' %><!--サブイメージ3-->
       <% end %>
   </div>
 </div>

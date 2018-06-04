@@ -22,15 +22,12 @@
 
 class Item < ActiveRecord::Base
   # pagination(kaminari)
-  paginates_per 30
+  paginates_per 15
 
   # relation
   has_many :cartitems
   belongs_to :genre
   belongs_to :subgenre
-
-  # pagination
-  # paginates_per 3
 
   # uploader
   mount_uploader :mainImage, ImageUploader

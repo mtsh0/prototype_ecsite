@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    set_layout
+    # set_layout
   end
 
   def create
@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
     else
       render 'new'
     end
-    set_layout
+    # set_layout
   end
 
   def show;
@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
     else
       render 'edit'
     end
-    set_layout
+    # set_layout
   end
 
   def destroy
