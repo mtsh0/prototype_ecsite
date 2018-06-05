@@ -1,5 +1,8 @@
 $(document).on('turbolinks:load', function(){
 
+  //スライドショー
+
+
   //未実装1
   // 画像ファイルのプレビュー(メイン画像)
   //https://qiita.com/namitop/items/b7167b502e19d6c26d23

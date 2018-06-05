@@ -13,17 +13,19 @@
 # end
 
 # http://vdeep.net/rubyonrails-carrierwave-s3
-CarrierWave.configure do |config|
-  config.fog_provider = 'fog/aws'
-  config.fog_credentials = {
-      provider:              'AWS',
-      # アクセスキー
-      aws_access_key_id:  Rails.application.secrets.aws_access_key_id,
-      # シークレットキー
-      aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      # Tokyo
-      region:  Rails.application.secrets.region
-  }
+if Rails.env.production?
+  CarrierWave.configure do |config|
+    config.fog_provider = 'fog/aws'
+    config.fog_credentials = {
+        provider:              'AWS',
+        # アクセスキー
+        aws_access_key_id:  Rails.application.secrets.aws_access_key_id,
+        # シークレットキー
+        aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
+        # Tokyo
+        region:  Rails.application.secrets.region
+    }
+end
 
   # 公開・非公開の切り替え
   config.fog_public     = true
