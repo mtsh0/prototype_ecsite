@@ -12,5 +12,6 @@
 !/log/.keep
 /tmp
 .env
-.gitignore
 public/uploads/
+.idea
+secrets.yml
