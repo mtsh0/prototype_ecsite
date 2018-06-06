@@ -22,7 +22,12 @@
         <td><%= position.address %></td>
         <td><%= position.latitude %></td>
         <td><%= position.longitude %></td>
-        <td><button class="btn btn-default btn-xs"><%= link_to '変更', edit_position_path(position.id) %></button>　<button class="btn btn-default btn-xs"><%= link_to '削除', edit_position_path(position.id), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></button></td>
+        <td><button class="btn btn-default btn-xs">
+          <%= link_to '変更', edit_position_path(position.id) %></button>
+          <button class="btn btn-default btn-xs">
+            <%= link_to '削除', position_path(position.id), method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
+          </button>
+        </td>
       </tr>
     <% end %>
   </tbody>

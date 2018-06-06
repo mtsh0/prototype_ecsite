@@ -11,11 +11,40 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.jpostal
 //= require jquery.autoKana
-//= require turbolinks
 //= require underscore
 //= require gmaps/google
 //= require bootstrap
 //= require_tree .
+//= require turbolinks
+
+
+
+//サイドバーのアコーディオン用
+$(document).on('turbolinks:load', function() {
+    (function ($) {
+        'use strict';
+        // Collapseイベント
+        $('#menu1, #menu2, #menu3, #menu4, #menu5').on({
+            // 折り畳み開く処理
+            'show.bs.collapse': function () {
+                $('a[href="#' + this.id + '"] span.glyphicon-chevron-down')
+                    .removeClass('glyphicon-chevron-down')
+                    .addClass('glyphicon-chevron-up');
+            },
+            // 折り畳み閉じる処理
+            'hide.bs.collapse': function () {
+                $('a[href="#' + this.id + '"] span.glyphicon-chevron-up')
+                    .removeClass('glyphicon-chevron-up')
+                    .addClass('glyphicon-chevron-down');
+            }
+        });
+        // ハッシュリンクキャンセル
+        $('a[href="#menu1"], a[href="#menu2"], a[href="#menu3"], a[href="#menu4"], a[href="#menu5"]').on('click', function (event) {
+            event.preventDefault();
+        });
+    })(jQuery);
+});

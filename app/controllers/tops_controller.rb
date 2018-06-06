@@ -3,6 +3,9 @@ class TopsController < ApplicationController
     @newItems = Item.order(updated_at: :desc).limit(4)
     @infos = Info.order(created_at: :desc).limit(3)
     @genres = Genre.all.includes(:subgenre)
+    @genre1Items = Item.where(genre_id: 1).order(updated_at: :desc).limit(4)
+    @genre2Items = Item.where(genre_id: 2).order(updated_at: :desc).limit(4)
+    @genre3Items = Item.where(genre_id: 3).order(updated_at: :desc).limit(4)
   end
 
   def how_to_use

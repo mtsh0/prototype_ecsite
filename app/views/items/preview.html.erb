@@ -5,6 +5,42 @@
 
 <h1><%= @item.itemName %> <span>(品番：<%= @item.partNumber %>)</span></h1>
 <div class="float-left">
+  <!-- スライドショー部分 -->
+  <!-- メイン画像 -->
+  <ul class="slider">
+    <!--メインイメージ-->
+    <li>
+      <a href="#">
+        <%= image_tag @item.mainImage.url, class: 'parentImage', id: 'mainimage' %>
+       </a>
+    </li>
+    <!--サブイメージ1-->
+    <li>
+      <a href="#">
+        <%= image_tag @item.mainImage.url, class: 'childImage', id: 'subimage1' %>
+      </a>
+    </li>
+    <!--サブイメージ2-->
+    <li>
+      <a href="#">
+        <%= image_tag @item.image2.url, class: 'childImage', id: 'subimage2' %>
+      </a>>
+    </li>
+    <!--サブイメージ3-->
+    <li>
+      <a href="#">
+        <%= image_tag @item.image3.url, class: 'childImage', id: 'subimage3' %>
+      </a>>
+    </li>
+    <% if @item.image2? %>
+        <%= image_tag @item.image2.url, class: 'childImage', id: 'subimage2' %><!--サブイメージ2-->
+    <% end %>
+    <% if @item.image3? %>
+        <%= image_tag @item.image3.url, class: 'childImage', id: 'subimage3' %><!--サブイメージ3-->
+    <% end %>
+  </ul>
+  <!-- メイン画像 -->
+
   <div class="image">
       <%= image_tag @item.mainImage.url, class: 'parentImage', id: 'mainimage' %><!--メインイメージ-->
       <%= image_tag @item.mainImage.url, class: 'childImage', id: 'subimage1' %><!--サブイメージ1-->
@@ -15,6 +51,7 @@
           <%= image_tag @item.image3.url, class: 'childImage', id: 'subimage3' %><!--サブイメージ3-->
       <% end %>
   </div>
+
 </div>
 <div class="description"><!--説明-->
   <%= @item.description %>
