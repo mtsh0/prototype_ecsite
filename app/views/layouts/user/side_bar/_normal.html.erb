@@ -1,43 +1,45 @@
 <div id="side-bar">
-  <h5 class="text-center">ジャンル</h5>
-  <div id="menu">
-    <div class="panel list-group">
-      <!--ジャンル1-->
-      <a href="#menu1" class="list-group-item" data-toggle="collapse" data-target="#menu1" data-parent="#menu">
-        ジャンル1
-      </a>
-      <div id="menu1" class="sublinks collapse">
-        <%= link_to '全商品', genre_top_path(1), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル1', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 1), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル2', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 2), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル3', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 3), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル4', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 4), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル5', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 5), class: 'list-group-item small' %>
-      </div>
-      <!--ジャンル2-->
-      <a href="#menu2" class="list-group-item" data-toggle="collapse" data-target="#menu2" data-parent="#menu">
-        ジャンル2
-      </a>
-      <div id="menu2" class="sublinks collapse">
-        <%= link_to '全商品', genre_top_path(2), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル6', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 6), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル7', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 7), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル8', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 8), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル9', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 9), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル10', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 10), class: 'list-group-item small' %>
-      </div>
-      <!--ジャンル3-->
-      <a href="#menu3" class="list-group-item" data-toggle="collapse" data-target="#menu3" data-parent="#menu">
-        ジャンル3
-      </a>
-      <div id="menu3" class="sublinks collapse">
-        <%= link_to '全商品', genre_top_path(3), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル11', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 11), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル12', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 12), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル13', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 13), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル14', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 14), class: 'list-group-item small' %>
-        <%= link_to 'サブジャンル15', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 15), class: 'list-group-item small' %>
-      </div>
+  <div class="panel panel-success">
+    <div class="panel-heading text-center">
+      <b>ジャンル</b>
+    </div>
+    <div id="menu">
+        <!--ジャンル1-->
+        <a href="#menu1" class="list-group-item text-center" data-toggle="collapse" data-target="#menu1" data-parent="#menu">
+          ジャンル1
+        </a>
+        <div id="menu1" class="sublinks collapse">
+          <%= link_to '全商品', genre_top_path(1), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル1', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 1), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル2', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 2), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル3', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 3), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル4', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 4), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル5', subgenre_top_path(id: 1, genre_id: 1, subgenre_id: 5), class: 'list-group-item small' %>
+        </div>
+        <!--ジャンル2-->
+        <a href="#menu2" class="list-group-item text-center" data-toggle="collapse" data-target="#menu2" data-parent="#menu">
+          ジャンル2
+        </a>
+        <div id="menu2" class="sublinks collapse">
+          <%= link_to '全商品', genre_top_path(2), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル6', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 6), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル7', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 7), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル8', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 8), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル9', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 9), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル10', subgenre_top_path(id: 1, genre_id: 2, subgenre_id: 10), class: 'list-group-item small' %>
+        </div>
+        <!--ジャンル3-->
+        <a href="#menu3" class="list-group-item text-center" data-toggle="collapse" data-target="#menu3" data-parent="#menu">
+          ジャンル3
+        </a>
+        <div id="menu3" class="sublinks collapse">
+          <%= link_to '全商品', genre_top_path(3), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル11', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 11), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル12', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 12), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル13', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 13), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル14', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 14), class: 'list-group-item small' %>
+          <%= link_to 'サブジャンル15', subgenre_top_path(id: 1, genre_id: 3, subgenre_id: 15), class: 'list-group-item small' %>
+        </div>
     </div>
   </div>
 </div>
