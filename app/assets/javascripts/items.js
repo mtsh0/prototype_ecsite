@@ -1,7 +1,25 @@
 $(document).on('turbolinks:load', function(){
 
   //スライドショー
+  // $(document).on('turbolinks:load', function() {
+      $('.thumb-item').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.thumb-item-nav',
+          respondTo: 'min'
+      });
+      $('.thumb-item-nav').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          asNavFor: '.thumb-item',
+          focusOnSelect: true,
+      });
 
+  // });
 
   //未実装1
   // 画像ファイルのプレビュー(メイン画像)
@@ -25,32 +43,6 @@ $(document).on('turbolinks:load', function(){
       }
     }
 
-  });
-
-// 入力処理(商品コード)
-  $('#item_itemCodeNo').on('input', function() {
-      // 半角変換
-      var halfVal = $(this).val().replace(/[！-～]/g,
-          function (tmpStr) {
-              // 文字コードをシフト
-              return String.fromCharCode(tmpStr.charCodeAt(0) - 0xFEE0);
-          }
-      );
-    // 数字以外の不要な文字を削除
-    $(this).val(halfVal.replace(/[^0-9]/g, ''));
-  });
-
-// 入力処理(出荷単位)
-  $('#item_shippingUnit').on('input', function() {
-      // 半角変換
-      var halfVal = $(this).val().replace(/[！-～]/g,
-          function (tmpStr) {
-              // 文字コードをシフト
-              return String.fromCharCode(tmpStr.charCodeAt(0) - 0xFEE0);
-          }
-      );
-    // 数字以外の不要な文字を削除
-    $(this).val(halfVal.replace(/[^0-9]/g, ''));
   });
 
 

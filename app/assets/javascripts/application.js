@@ -16,6 +16,7 @@
 //= require jquery.jpostal
 //= require jquery.autoKana
 //= require underscore
+//= require slick
 //= require gmaps/google
 //= require bootstrap
 //= require_tree .

@@ -4,91 +4,81 @@
 
 
 <h1><%= @item.itemName %> <span>(品番：<%= @item.partNumber %>)</span></h1>
-<div class="float-left">
+<!--<div class="float-left">-->
   <!-- スライドショー部分 -->
-  <!-- メイン画像 -->
-  <ul class="slider">
-    <!--メインイメージ-->
-    <li>
-      <a href="#">
-        <%= image_tag @item.mainImage.url, class: 'parentImage', id: 'mainimage' %>
-       </a>
-    </li>
-    <!--サブイメージ1-->
-    <li>
-      <a href="#">
-        <%= image_tag @item.mainImage.url, class: 'childImage', id: 'subimage1' %>
-      </a>
-    </li>
-    <!--サブイメージ2-->
-    <li>
-      <a href="#">
-        <%= image_tag @item.image2.url, class: 'childImage', id: 'subimage2' %>
-      </a>>
-    </li>
-    <!--サブイメージ3-->
-    <li>
-      <a href="#">
-        <%= image_tag @item.image3.url, class: 'childImage', id: 'subimage3' %>
-      </a>>
-    </li>
-    <% if @item.image2? %>
-        <%= image_tag @item.image2.url, class: 'childImage', id: 'subimage2' %><!--サブイメージ2-->
-    <% end %>
-    <% if @item.image3? %>
-        <%= image_tag @item.image3.url, class: 'childImage', id: 'subimage3' %><!--サブイメージ3-->
-    <% end %>
-  </ul>
-  <!-- メイン画像 -->
-
-  <div class="image">
-      <%= image_tag @item.mainImage.url, class: 'parentImage', id: 'mainimage' %><!--メインイメージ-->
-      <%= image_tag @item.mainImage.url, class: 'childImage', id: 'subimage1' %><!--サブイメージ1-->
-      <% if @item.image2? %>
-          <%= image_tag @item.image2.url, class: 'childImage', id: 'subimage2' %><!--サブイメージ2-->
-      <% end %>
-      <% if @item.image3? %>
-          <%= image_tag @item.image3.url, class: 'childImage', id: 'subimage3' %><!--サブイメージ3-->
-      <% end %>
-  </div>
-
-</div>
-<div class="description"><!--説明-->
-  <%= @item.description %>
-</div>
-<div class="clearboth"></div>
-<% if @item.attention.blank? %>
-<% else %>
-    <div class="attention">
-      <h2>注意事項</h2>
-      <div><%= @item.attention %></div>
-
+  <!-- ↓スライダー本体 -->
+    <div class="slider thumb-item">
+        <%= image_tag @item.mainImage.url %>
+        <%= image_tag @item.image2.url %>
+        <%= image_tag @item.image3.url %>
     </div>
-<% end %>
-<div class="price-cart">
-  <div class="price">
-    価格<br>
-    <% price = (@item.price).to_s %>
-    <% if price.end_with?(".0") %><!--整数なら-->
-        <% @item.price = (@item.price).to_i %>
-        <%= number_to_currency(@item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
-    <% else %>
-        <%= number_to_currency(@item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
-    <% end %>
+
+    <!-- ↓サムネイル -->
+    <div class="thumb-item-nav">
+        <div><%= image_tag @item.mainImage.thumb.url %></div>
+        <div><%= image_tag @item.image2.thumb.url %></div>
+        <div><%= image_tag @item.image3.thumb.url %></div>
+    </div>
+
+
+
+   <div class="description"><!--説明-->
+    <%= @item.description %>
   </div>
-  <% if user_signed_in? %>
-    <%= form_tag(add_item_carts_path, method: :post) do %>
-      <%= hidden_field_tag :item_id, @item.id %>
-      <%= hidden_field_tag :user_id, current_user.id %>
+  <div class="clearboth"></div>
+  <% if @item.attention.blank? %>
+  <% else %>
+      <div class="attention">
+        <h2>注意事項</h2>
+        <div><%= @item.attention %></div>
+
+      </div>
+  <% end %>
+  <div class="price-cart">
+    <div class="price">
+      価格<br>
+      <% price = (@item.price).to_s %>
+      <% if price.end_with?(".0") %><!--整数なら-->
+          <% @item.price = (@item.price).to_i %>
+          <%= number_to_currency(@item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+      <% else %>
+          <%= number_to_currency(@item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <%= form_tag(add_item_carts_path, method: :post) do %>
+        <%= hidden_field_tag :item_id, @item.id %>
+        <%= hidden_field_tag :user_id, current_user.id %>
+        <div class="text-center">
+          <%= select_tag :quantity, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]) %>
+          <%= submit_tag 'カートに入れる', data: { disable_with: 'カートに追加しています' } %>
+        </div>
+      <% end %>
+    <% else %>
       <div class="text-center">
-        <%= select_tag :quantity, options_for_select([[1, 1], [2, 2], [3, 3], [4, 4], [5, 5]]) %>
-        <%= submit_tag 'カートに入れる', data: { disable_with: 'カートに追加しています' } %>
+        <button class="btn btn-primary btn-xs"><%= link_to 'ログインする', new_user_session_path %></button>
       </div>
     <% end %>
-  <% else %>
-    <div class="text-center">
-      <button class="btn btn-primary btn-xs"><%= link_to 'ログインする', new_user_session_path %></button>
-    </div>
-  <% end %>
-</div>
+  </div>
+<!--</div>-->
 
+<!--<script type="text/javascript">-->
+<!--$(document).on('turbolinks:load', function() {-->
+      <!--$('.thumb-item').slick({-->
+      <!--infinite: true,-->
+      <!--slidesToShow: 1,-->
+      <!--slidesToScroll: 1,-->
+      <!--arrows: false,-->
+      <!--fade: true,-->
+      <!--asNavFor: '.thumb-item-nav',-->
+      <!--respondTo: 'min'-->
+      <!--});-->
+      <!--$('.thumb-item-nav').slick({-->
+      <!--infinite: true,-->
+      <!--slidesToShow: 3,-->
+      <!--slidesToScroll: 1,-->
+      <!--asNavFor: '.thumb-item',-->
+      <!--focusOnSelect: true,-->
+      <!--});-->
+<!--});-->
+<!--</script>-->

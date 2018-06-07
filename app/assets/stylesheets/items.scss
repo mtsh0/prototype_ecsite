@@ -254,7 +254,7 @@
           width: 100px;
           height: 100px;
           padding: 10px;
-          margin: auto;
+          //margin: auto;
         }//img
       }//td
 
@@ -284,29 +284,74 @@
       list-style-type: disc;
     } //li
 
-    .float-left{
-      float: left;
+    /*カルーセル*/
+    .slider {
+      margin: 0px;
+    }
+    .slider img {
 
-      .image{
-        display: flex;
-        flex-wrap: wrap;
-        width: 303px;
-        height: 403px;
-        border: 2px solid #C0C0C0;
-        margin: 0 20px 0 10px;
+    }
+    .single-item {
+      /*max-width: 600px;*/
+      /*margin: 0 auto 50px;*/
+    }
+    .slick-prev::before, .slick-next::before {
+      font-size: 24px;
+    }
+    .lazy-item .slick-next,
+    .thumb-item-nav .slick-next,
+    .multiple-item .slick-next,
+    .center-item .slick-next {
+      right: 20px;
+      z-index: 99;
+    }
+    .lazy-item .slick-prev,
+    .thumb-item-nav .slick-prev,
+    .multiple-item .slick-prev,
+    .center-item .slick-prev {
+      left: 15px;
+      z-index: 100;
+    }
+    .single-item .slick-prev::before,
+    .single-item .slick-next::before {
+      color: #666;
+    }
+    .slick-dots {
+      bottom:-25px;
+    }
 
-        .parentImage{
-          justify-content: center;
-          width: 300px;
-          height: 300px;
-        }//.parentImage
+    .thumb-item {
+      display: flex;
+      width: 300px;
+      height: 300px;
+    }
+    .thumb-item-nav {
+      /*display: flex;*/
+      width: 300px;
+      height:100px;
+      margin: 0;
+      padding: 0;
 
-        .childImage{
-          width: 99px;
-          height: 99px;
-        }//.childImage
-      }//.image
-    }//.float-left
+    }
+
+    .slick-track{
+      width: 300px;
+    }
+    /*.thumb-item-nav li{*/
+    /*margin: 5px;*/
+    /*}*/
+    .lazy-item {
+      /*width: 300px;*/
+      margin: 0   auto 50px;
+    }
+    .lazy-item li {
+      margin: 0 5px;
+    }
+
+    element.style {
+      width: 100px;
+    }
+
 
     .description{
       float: right;
