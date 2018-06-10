@@ -5,7 +5,7 @@
 @media screen and (min-width: 765px) {
 
   .tops{
-
+//index
     main.index{
 
       .box{
@@ -58,6 +58,7 @@
       }//.box
     }//main.index
 
+//genre, subgenre
     main.genre, main.subgenre {
       div.item-card {
         float: left;
@@ -90,6 +91,7 @@
       }//.item-card
     }//main.subgenre
 
+//company
     .company{
       h1{
         font-style: italic;
@@ -116,6 +118,48 @@
         margin-left: 10px;
       }
     }//.company
+
+//search
+    main.search{
+
+        h2{
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-120%) translateX(1em);
+
+          background-color: white;
+          padding: 0 5px;
+
+          .show-more{
+            color: lightgrey;
+            font-size: 15px;
+            padding-left: 20px;
+            display: inline-block
+          }//.show-more
+        }//h2
+
+        div.item-card {
+          width: 149px;
+          height: 190px;
+          border: solid 2px lightgrey;
+          margin: 20px 5px 0 5px;
+
+          div.image {
+            width: 145px;
+            height: 145px;
+            border-bottom: solid 2px lightgrey;
+
+            img{
+              width: 145px;
+              height: 145px;
+            }
+          }
+          div.price {
+            color: #FF4500;
+          }
+        }//.item-card
+    }//search
   }// .top
-}// @media
+}// @media(min-width: 765px)
 

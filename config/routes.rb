@@ -49,12 +49,17 @@ Rails.application.routes.draw do
 
   # トップ画面
   resources :tops, only: [:index] do
-    get 'how_to_use', on: :collection    # how_to
-    get 'tops/q_and_a', on: :collection  # Q & A
-    get 'contact', on: :collection       # お問い合わせ(後でcontacts#new へリンク)
-    get 'company', on: :collection       # プロフィール
-    get 'genre', on: :member
-    get 'subgenre', on: :member
+    collection do
+      get 'how_to_use'#, on: :collection    # how_to
+      get 'tops/q_and_a'#, on: :collection  # Q & A
+      get 'contact'#, on: :collection       # お問い合わせ(後でcontacts#new へリンク)
+      get 'company'#, on: :collection       # プロフィール
+      get 'search'
+    end
+    member do
+      get 'genre'#, on: :member
+      get 'subgenre'#, on: :member
+    end
   end
 
   root to: 'tops#index'

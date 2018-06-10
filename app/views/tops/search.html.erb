@@ -1,0 +1,33 @@
+<h1>Tops#search</h1>
+<p>Find me in app/views/tops/search.html.erb</p>
+<p><h3>検索結果</h3></p>
+
+
+<% unless @search_items.blank? %>
+  <div class="text-left"><%= @count_items %>件</div>
+  <% @search_items.each do |item| %>
+    <div class="pull-left">
+    <%= link_to(preview_item_path(item.id)) do %>
+      <div class="item-card">
+        <div class="image">
+          <%= image_tag item.mainImage.url %>
+        </div>
+        <div class="name text-center">
+          <%= item.itemName %>
+        </div>
+        <div class="price text-center">
+          <% price = (item.price).to_s %>
+          <% if price.end_with?(".0") %><!--整数なら-->
+              <% item.price = (item.price).to_i %>
+              <%= number_to_currency(item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+          <% else %>
+              <%= number_to_currency(item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>検索した商品は見つかりませんでした。</p>
+<% end %>
