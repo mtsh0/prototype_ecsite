@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  # 開発環境メール確認用設定
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
+
+
   # 管理者用
   devise_for :managers, controllers: {
     sessions: 'managers/sessions',
@@ -52,4 +58,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'tops#index'
+
+
 end

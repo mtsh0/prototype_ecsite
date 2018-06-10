@@ -5,16 +5,11 @@
 <h4>注文日時</h4>
 <p><%= @order.created_at.strftime('%Y/%m/%d') %> <%= @order.created_at.strftime('%H:%M') %></p>
 <h4>配送先住所</h4>
-<p>〒<%= @address.postalcode %></p>
-<p><%= @address.prefecture.name %><%= @address.city %></p>
-<p><%= @address.street %><%= @address.others %></p>
-
+<p>〒<%= @order.address.postalcode %></p>
+<p><%= @order.address.prefecture.name %><%= @order.address.city %></p>
+<p><%= @order.address.street %><%= @order.address.others %></p>
 
 <h4>注文内容</h4>
-
-<% @cartitems.each do |cartitem| %>
-
-<% end %>
 
 <table>
   <tr>
@@ -26,7 +21,8 @@
     <th class="text-center">数量</th>
     <th class="text-center">小計</th>
   </tr>
-  <% @cartitems.each do |cartitem| %>
+  <% total_count  = 0 %>
+  <% @order.cartitems.each do |cartitem| %>
       <tr>
         </td>
         <!--商品番号-->
@@ -62,10 +58,11 @@
         </td>
         <td></td>
       </tr>
+      <% total_count += cartitem.quantity %>
   <% end %>
   <tr>
     <td class="text-right" colspan="6">合計数</td>
-    <td class="text-right"><%= @total_count %>点</td>
+    <td class="text-right"><%= total_count %>点</td>
   </tr>
   <tr>
     <td class="text-right" colspan="6">合計金額</td>

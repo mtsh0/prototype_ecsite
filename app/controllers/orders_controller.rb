@@ -101,6 +101,8 @@ class OrdersController < ApplicationController
         cartitem.order_id = @order.id
         cartitem.save
       end
+      OrderNotifier.received(@order).deliver
+      OrderNotifier.manager_received(@order).deliver
       redirect_to order_path(@order), success: '注文が完了しました。お買い上げいただきありがとうございました'
     else
       flash.now[:danger] = 'エラー1'

@@ -1,0 +1,63 @@
+<h1>OrderNotifier#received</h1>
+find me in app/views/order_notifier/received.html.erb
+
+<div>うえのとしひろのショッピングサイト 注文内容の確認</div>
+<p>
+==========================================<br>
+上野敏弘のショッピングサイト をご利用いただき誠にありがとうございます。<br>
+上野敏弘のショッピングサイト がお客様のご注文を承ったことをお知らせいたします。<br>
+注文内容は以下のとおりです。<br>
+==========================================
+</p>
+
+<p>
+注文番号<br>
+<%= @order.order_no %><br>
+</p>
+
+<p>
+配送先住所
+〒<%= @order.address.postalcode %><br>
+<%= @order.address.prefecture.name %><%= @order.address.city %><br>
+<%= @order.address.street %><%= @order.address.others %><br>
+</p>
+
+<p>
+合計
+<%= number_to_currency(@order.total_price, :format => "%u%n", :precision => 0, :unit =>"¥") %><br>
+
+<table>
+  <tr>
+    <th>商品名</th>
+    <th>価格</th>
+    <th>数量</th>
+    <th>小計</th>
+  </tr>
+  <% total_count = 0 %>
+  <% @order.cartitems.each do |cartitem| %>
+    <tr>
+        <!--商品名-->
+        <td><%= cartitem.item.itemName %></td><br>
+        <!--価格-->
+        <% price = (cartitem.item.price).to_s %>
+        <% if price.end_with?(".0") %><!--整数なら-->
+          <% cartitem.item.price = (cartitem.item.price).to_i %>
+          <td><%= number_to_currency(cartitem.item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %></td>
+        <% else %>
+          <td><%= number_to_currency(cartitem.item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %></td>
+        <% end %>
+        <!--数量-->
+        <td><%= cartitem.quantity %></td>
+        <!--小計-->
+        <% subtotal_price = ((cartitem.item.price) * (cartitem.quantity)).to_s %>
+        <% if subtotal_price.end_with?(".0") %><!--整数なら-->
+          <% subtotal_price = (subtotal_price).to_i %>
+          <td><%= number_to_currency(subtotal_price, :format => "%u%n", :precision => 0, :unit =>"¥") %></td>
+        <% else %>
+          <td><%= number_to_currency(subtotal_price, :format => "%u%n", :precision => 1, :unit =>"¥") %></td>
+        <% end %>
+        <% total_count += cartitem.quantity %>
+    </tr>
+  <% end %>
+</table>
+</p>

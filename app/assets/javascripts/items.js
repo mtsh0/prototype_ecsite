@@ -9,8 +9,9 @@ $(document).on('turbolinks:load', function(){
           arrows: false,
           fade: true,
           asNavFor: '.thumb-item-nav',
-          respondTo: 'min'
-      });
+          respondTo: 'min'//,
+          // element.style.width = '300px';
+});
       $('.thumb-item-nav').slick({
           infinite: true,
           slidesToShow: 3,

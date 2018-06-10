@@ -20,6 +20,7 @@ gem 'devise-i18n-views'
 gem 'gmaps4rails'
 gem 'jquery-turbolinks'
 gem 'kaminari'
+
 gem 'mini_magick'
 gem 'payjp'
 gem 'squasher'
@@ -32,7 +33,7 @@ gem 'squasher'
 # gem 'breadcrumbs_on_rails'
 # gem 'devise_masquerade'
 # gem 'kakurenbo_puti'
-# gem 'premailer-rails'
+gem 'premailer-rails'
 # gem 'pundit'
 # gem 'rack-user_agent'
 # Use ActiveModel has_secure_password
@@ -47,6 +48,7 @@ gem 'squasher'
 group :development, :test do
 
   gem 'annotate'
+  gem 'letter_opener_web'
   gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry-rails'
@@ -64,6 +66,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'view_source_map'
 end
 
 

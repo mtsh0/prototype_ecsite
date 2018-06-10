@@ -6,10 +6,10 @@ class CartsController < ApplicationController
     @cartitems = Cartitem.includes(:item).where(order_id: nil,user_id: current_user.id)
 
     @totalcount = 0
-    @totalprice = 0
+    @total_price = 0
     @cartitems.each do |cartitem|
       @totalcount += cartitem.quantity
-      @totalprice += (cartitem.quantity * cartitem.item.price)
+      @total_price += (cartitem.quantity * cartitem.item.price)
     end
   end
 

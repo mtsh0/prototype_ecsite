@@ -15,7 +15,7 @@ class Order < ActiveRecord::Base
   belongs_to :user
   belongs_to :address
   belongs_to :dvendor
-  has_many :cartitem
-
+  has_many :cartitems
+  has_many :items, through: :cartitems
 
 end

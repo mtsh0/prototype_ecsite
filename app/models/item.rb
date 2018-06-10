@@ -25,7 +25,7 @@ class Item < ActiveRecord::Base
   paginates_per 15
 
   # relation
-  has_many :cartitems
+  has_many :orders, through: :cartitems
   belongs_to :genre
   belongs_to :subgenre
 

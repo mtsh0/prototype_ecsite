@@ -1,0 +1,44 @@
+OrderNotifier#received
+
+find me in app/views/order_notifier/received.text.erb
+うえのとしひろのショッピングサイト 注文内容の確認
+==========================================
+上野敏弘のショッピングサイト をご利用いただき誠にありがとうございます。
+上野敏弘のショッピングサイト がお客様のご注文を承ったことをお知らせいたします。
+注文内容は以下のとおりです。
+==========================================
+
+注文番号
+<%= @order.order_no %>
+
+配送先住所
+〒<%= @order.address.postalcode %>
+<%= @order.address.prefecture.name %><%= @order.address.city %>
+<%= @order.address.street %><%= @order.address.others %>
+
+合計
+<%= number_to_currency(@order.total_price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+<% total_count = 0 %>
+<% @order.cartitems.each do |cartitem| %>
+  <!--商品名-->
+  <%= cartitem.item.itemName %>
+  <!--価格-->
+  <% price = (cartitem.item.price).to_s %>
+  <% if price.end_with?(".0") %><!--整数なら-->
+      <% cartitem.item.price = (cartitem.item.price).to_i %>
+      <%= number_to_currency(cartitem.item.price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+  <% else %>
+      <%= number_to_currency(cartitem.item.price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+  <% end %>
+  <!--数量-->
+  <%= cartitem.quantity %>
+  <!--小計-->
+  <% subtotal_price = ((cartitem.item.price) * (cartitem.quantity)).to_s %>
+  <% if subtotal_price.end_with?(".0") %><!--整数なら-->
+      <% subtotal_price = (subtotal_price).to_i %>
+      <%= number_to_currency(subtotal_price, :format => "%u%n", :precision => 0, :unit =>"¥") %>
+  <% else %>
+      <%= number_to_currency(subtotal_price, :format => "%u%n", :precision => 1, :unit =>"¥") %>
+  <% end %>
+  <% total_count += cartitem.quantity %>
+<% end %>
