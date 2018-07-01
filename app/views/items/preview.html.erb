@@ -5,7 +5,7 @@
 
 <h1><%= @item.itemName %> <span>(品番：<%= @item.partNumber %>)</span></h1>
 
-<div class="border-image">
+<div class="border-image col-md-5">
   <!-- スライドショー部分 -->
   <!-- ↓スライダー本体 -->
     <div class="slider thumb-item">
@@ -62,23 +62,3 @@
   </div>
 <!--</div>-->
 
-<!--<script type="text/javascript">-->
-//$(document).on('turbolinks:load', function() {
-//    $('.thumb-item').slick({
-//        infinite: true,
-//        slidesToShow: 1,
-//        slidesToScroll: 1,
-//        arrows: false,
-//        fade: true,
-//        asNavFor: '.thumb-item-nav',
-//        respondTo: 'min'
-//    });
-//    $('.thumb-item-nav').slick({
-//        infinite: true,
-//        slidesToShow: 3,
-//        slidesToScroll: 1,
-//        asNavFor: '.thumb-item',
-//        focusOnSelect: true,
-//    });
-//});
-<!--</script>-->
