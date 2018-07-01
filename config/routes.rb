@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'reviews/index'
+
+  get 'reviews/show'
+
+  get 'reviews/new'
+
+  get 'reviews/create'
+
+  get 'reviews/edit'
+
+  get 'reviews/update'
+
+  get 'reviews/destroy'
+
   # 開発環境メール確認用設定
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: '/letter_opener'
