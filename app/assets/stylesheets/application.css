@@ -20,3 +20,10 @@
 @extend .has-error;
 }
 
+
+@media screen and (min-width: 765px){
+    
+    ul.navbar-nav.navbar-right{
+        margin-right: 20px;
+    }
+}
